@@ -1,0 +1,23 @@
+.table-hover-cell .hover-cell:hover:not(.disabled){
+	filter: invert();
+	background-color: #a43f21;
+	cursor: pointer;
+}
+
+.hover-cell{
+	padding: 3px 1px;
+}
+
+.table-hover-cell .marked:not(.disabled){
+	filter: invert();
+	background-color: #a347a3;
+}
+
+.table-hover-cell .marked:hover:not(.disabled){
+	filter: invert();
+	background-color: #a347a3;
+}
+
+.table-hover-cell .disabled{
+	background-color: #999999;
+}

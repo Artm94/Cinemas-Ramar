@@ -1,0 +1,31 @@
+.item > img{
+	height: 370px!important;
+	width: 100%;
+}
+
+.carousel-indicators{
+	text-align: right;
+}
+
+#cartelera{
+	margin-top: 10px;
+}
+
+#titulo{
+	font-size: 20px;
+}
+
+.movie-item  a{
+	text-decoration: none;
+	color: teal;
+	text-align: right;
+}
+
+.movie-item img{
+	height: 320px!important;
+	width: 240px!important;
+}
+
+.movie-item p{
+	text-align: justify;
+}

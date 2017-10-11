@@ -1,0 +1,6 @@
+.search-item{
+	cursor: pointer;
+}
+.search-item:hover > .thumbnail{
+	border-color: yellow;
+}
