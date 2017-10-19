@@ -17,7 +17,6 @@ class MovieFinder{
 		$movieName = urlencode($movieName);
 		$url = "https://api.themoviedb.org/3/search/movie?api_key=$this->apiKey&language=$this->language&page=$this->page&include_adult=false&query=$movieName";
 		$data = file_get_contents($url);
-		$data = utf8_encode($data);
 		$movie = json_decode($data)->results[0];
 		return $movie;
 	}
@@ -26,16 +25,14 @@ class MovieFinder{
 		$movieName = urlencode($movieName);
 		$url = "https://api.themoviedb.org/3/search/movie?api_key=$this->apiKey&language=$this->language&page=$this->page&include_adult=false&query=$movieName";
 		$data = file_get_contents($url);
-		$data = utf8_encode($data);
 		$count = json_decode($data)->total_results;
 		return ($count > 0);
 	}
 
 	public function getMovieById($id){
 		$movieID = urlencode($id);
-		$url = "https://api.themoviedb.org/3/movie/$movieID?api_key=$this->apiKey&language=$this->language&append_to_response=images&include_image_language=$this->language,null";
+		$url = "https://api.themoviedb.org/3/movie/$movieID?api_key=$this->apiKey&language=$this->language&append_to_response=images,credits&include_image_language=$this->language,null";
 		$data = file_get_contents($url);
-		$data = utf8_encode($data);
 		$data = json_decode($data);
 		return $data;
 	}
@@ -53,7 +50,6 @@ class MovieFinder{
 		$movieID = urlencode($movieID);
 		$url = "https://api.themoviedb.org/3/movie/$movieID/images?api_key=$this->apiKey&language=$this->language";
 		$data = file_get_contents($url);
-		$data = utf8_encode($data);
 		$data = json_decode($data);
 		return $data->results;
 	}

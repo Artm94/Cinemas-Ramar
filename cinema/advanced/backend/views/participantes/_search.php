@@ -19,8 +19,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'nombres') ?>
 
-    <?= $form->field($model, 'apellidos') ?>
-
     <?= $form->field($model, 'tipo') ?>
 
     <div class="form-group">

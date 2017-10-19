@@ -19,7 +19,7 @@ class ParticipantesSearch extends Participantes
     {
         return [
             [['id'], 'integer'],
-            [['nombres', 'apellidos', 'tipo'], 'safe'],
+            [['nombres', 'tipo'], 'safe'],
         ];
     }
 
@@ -63,7 +63,6 @@ class ParticipantesSearch extends Participantes
         ]);
 
         $query->andFilterWhere(['like', 'nombres', $this->nombres])
-            ->andFilterWhere(['like', 'apellidos', $this->apellidos])
             ->andFilterWhere(['like', 'tipo', $this->tipo]);
 
         return $dataProvider;

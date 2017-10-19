@@ -26,7 +26,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'nombres',
-            'apellidos',
             'tipo',
 
             ['class' => 'yii\grid\ActionColumn','template'=>'{view} {update}'],

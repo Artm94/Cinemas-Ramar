@@ -14,8 +14,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'nombres')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'apellidos')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'tipo')->dropDownList([ 'actor' => 'Actor', 'director' => 'Director', ], ['prompt' => '']) ?>
 
     <div>

@@ -28,7 +28,7 @@ class AppAsset extends AssetBundle
     '//code.jquery.com/ui/1.11.4/jquery-ui.min.js',
     '//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js',
     'plugins/sparkline/jquery.sparkline.min.js',
-    'plugins/slimScroll/jquery.slimscroll.min.js',
+    //'plugins/slimScroll/jquery.slimscroll.min.js',
     'plugins/fastclick/fastclick.min.js',
     'js/app.min.js',
     //'plugins/daterangepicker/moment.min.js',

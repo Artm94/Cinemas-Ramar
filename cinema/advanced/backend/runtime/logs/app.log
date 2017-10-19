@@ -13606,3 +13606,1477 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1507336466.388
     'REQUEST_TIME' => 1507336466
 ]
+2017-10-13 04:23:40 [::1][-][-][error][ParseError] ParseError: syntax error, unexpected ',', expecting ']' in /var/www/html/cinema/advanced/backend/models/ApiOptions.php:17
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\models\\...')
+#1 /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php(77): spl_autoload_call('backend\\models\\...')
+#2 [internal function]: backend\controllers\PeliculasController->actionCreate()
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#6 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('peliculas/creat...', Array)
+#7 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#9 {main}
+2017-10-13 04:23:40 [::1][-][-][info][application] $_GET = [
+    'r' => 'peliculas/create'
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    'advanced-frontend' => 'u9slrcoc5e836qbh96uiiv59q5'
+    '_csrf-frontend' => 'a223dc8906d0b90ec0e82feed56a9b851c858cff9b55871f43f54b37e5f95ea6a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"6XJvy24VKKfAAklgBOaYaQWEsWTT67Sk\";}'
+    '_identity-frontend' => 'b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[11,\"9MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd\",2592000]\";}'
+    'advanced-backend' => '54hl8j95q6uj8hcvr2u75mff91'
+    '_csrf-backend' => '44d55769ad7999de79c74da487818128a32f4b02a698946f6dc97ae006db19eca:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"EXJ_K_fzGHf_ifG7oa6e_iUp9qFU1M21\";}'
+    '_identity-backend' => 'b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=peliculas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; advanced-frontend=u9slrcoc5e836qbh96uiiv59q5; _csrf-frontend=a223dc8906d0b90ec0e82feed56a9b851c858cff9b55871f43f54b37e5f95ea6a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%226XJvy24VKKfAAklgBOaYaQWEsWTT67Sk%22%3B%7D; _identity-frontend=b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%229MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd%22%2C2592000%5D%22%3B%7D; advanced-backend=54hl8j95q6uj8hcvr2u75mff91; _csrf-backend=44d55769ad7999de79c74da487818128a32f4b02a698946f6dc97ae006db19eca%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22EXJ_K_fzGHf_ifG7oa6e_iUp9qFU1M21%22%3B%7D; _identity-backend=b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '47004'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=peliculas%2Fcreate'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1507868620.38
+    'REQUEST_TIME' => 1507868620
+]
+2017-10-14 19:26:09 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: apiData in /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php:93
+Stack trace:
+#0 /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php(93): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/c...', 93, Array)
+#1 [internal function]: backend\controllers\PeliculasController->actionCreate()
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#5 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('peliculas/creat...', Array)
+#6 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#8 {main}
+2017-10-14 19:26:09 [::1][-][-][info][application] $_GET = [
+    'r' => 'peliculas/create'
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    '_identity-frontend' => 'b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[11,\"9MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd\",2592000]\";}'
+    'advanced-backend' => 'fn4ml8uth94229kg5jgjp7lsm0'
+    '_csrf-backend' => 'a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C\";}'
+    '_identity-backend' => 'b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=peliculas%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; _identity-frontend=b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%229MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd%22%2C2592000%5D%22%3B%7D; advanced-backend=fn4ml8uth94229kg5jgjp7lsm0; _csrf-backend=a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C%22%3B%7D; _identity-backend=b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '39152'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=peliculas%2Fcreate'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508009169.658
+    'REQUEST_TIME' => 1508009169
+]
+2017-10-14 21:01:06 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: backend\models\ApiOptions::apiFlag in /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php(83): yii\base\Component->__get('apiFlag')
+#1 [internal function]: backend\controllers\PeliculasController->actionCreate()
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#5 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('peliculas/creat...', Array)
+#6 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#8 {main}
+2017-10-14 21:01:06 [::1][-][-][info][application] $_GET = [
+    'r' => 'peliculas/create'
+]
+
+$_POST = [
+    '_csrf-backend' => 'UzA3U1NCd00qSk4yFjdCGgplcQUCLkF4NQBFGwoyJRknd3UhZy9CDg=='
+    'Peliculas' => [
+        'nombre' => 'Buscando a Dory'
+        'clasificacion' => 'PGEI18'
+        'calificacion' => '5'
+    ]
+    'ApiOptions' => [
+        'movieFlag' => '1'
+        'movieId' => '127380'
+        'movieInformation' => '1'
+        'movieMediaContent' => '1'
+        'movieCredits' => '1'
+    ]
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    '_identity-frontend' => 'b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[11,\"9MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd\",2592000]\";}'
+    '_csrf-backend' => 'a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C\";}'
+    'advanced-backend' => 'havqndl7g55a3pj5v2nk82uuh6'
+    '_identity-backend' => 'b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1567'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryY3X1ERnYt2LxHc72'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; _identity-frontend=b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%229MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd%22%2C2592000%5D%22%3B%7D; _csrf-backend=a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C%22%3B%7D; advanced-backend=havqndl7g55a3pj5v2nk82uuh6; _identity-backend=b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '39504'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=peliculas%2Fcreate'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508014866.683
+    'REQUEST_TIME' => 1508014866
+]
+2017-10-14 21:05:57 [::1][7][havqndl7g55a3pj5v2nk82uuh6][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id in /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Controller.php:149
+Stack trace:
+#0 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('peliculas/view', Array)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#6 {main}
+2017-10-14 21:05:56 [::1][7][havqndl7g55a3pj5v2nk82uuh6][info][application] $_GET = [
+    'r' => 'peliculas/view'
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    '_identity-frontend' => 'b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[11,\"9MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd\",2592000]\";}'
+    '_csrf-backend' => 'a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C\";}'
+    'advanced-backend' => 'havqndl7g55a3pj5v2nk82uuh6'
+    '_identity-backend' => 'b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; _identity-frontend=b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%229MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd%22%2C2592000%5D%22%3B%7D; _csrf-backend=a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C%22%3B%7D; advanced-backend=havqndl7g55a3pj5v2nk82uuh6; _identity-backend=b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '40584'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=peliculas%2Fview'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=peliculas%2Fview'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508015156.941
+    'REQUEST_TIME' => 1508015156
+]
+2017-10-14 21:14:32 [::1][-][-][error][yii\base\ErrorException:4096] yii\base\ErrorException: Object of class backend\models\ApiOptions could not be converted to string in /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php:83
+Stack trace:
+#0 /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php(83): yii\base\ErrorHandler->handleError(4096, 'Object of class...', '/var/www/html/c...', 83, Array)
+#1 [internal function]: backend\controllers\PeliculasController->actionCreate()
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#5 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('peliculas/creat...', Array)
+#6 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#8 {main}
+2017-10-14 21:14:32 [::1][-][-][info][application] $_GET = [
+    'r' => 'peliculas/create'
+]
+
+$_POST = [
+    '_csrf-backend' => 'Y2J1ejhXSHEaGAwbfSJ9Jjo3MyxpO35EBVIHMmEnGiUXJTcIDDp9Mg=='
+    'Peliculas' => [
+        'nombre' => 'Buscando a Dory'
+        'clasificacion' => 'PGEI18'
+        'calificacion' => '5'
+    ]
+    'ApiOptions' => [
+        'movieFlag' => '1'
+        'movieId' => '127380'
+        'movieInformation' => '1'
+        'movieMediaContent' => '1'
+        'movieCredits' => '1'
+    ]
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    '_identity-frontend' => 'b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[11,\"9MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd\",2592000]\";}'
+    '_csrf-backend' => 'a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C\";}'
+    'advanced-backend' => 'havqndl7g55a3pj5v2nk82uuh6'
+    '_identity-backend' => 'b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1567'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryLUcjFGr3AQJjFQ61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; _identity-frontend=b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%229MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd%22%2C2592000%5D%22%3B%7D; _csrf-backend=a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C%22%3B%7D; advanced-backend=havqndl7g55a3pj5v2nk82uuh6; _identity-backend=b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '44768'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=peliculas%2Fcreate'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508015672.773
+    'REQUEST_TIME' => 1508015672
+]
+2017-10-14 21:16:52 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nombre' in 'where clause' in /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Command.php:902
+Stack trace:
+#0 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Command.php(902): PDOStatement->execute()
+#1 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Query.php(253): yii\db\Command->queryOne()
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/ActiveQuery.php(295): yii\db\Query->one(NULL)
+#4 /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php(122): yii\db\ActiveQuery->one()
+#5 [internal function]: backend\controllers\PeliculasController->actionCreate()
+#6 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('peliculas/creat...', Array)
+#10 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#12 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nombre' in 'where clause'
+The SQL being executed was: SELECT * FROM `participantes` WHERE (`nombre`='Ellen DeGeneres') OR (`id`=14) in /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Query.php(253): yii\db\Command->queryOne()
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/ActiveQuery.php(295): yii\db\Query->one(NULL)
+#4 /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php(122): yii\db\ActiveQuery->one()
+#5 [internal function]: backend\controllers\PeliculasController->actionCreate()
+#6 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#9 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('peliculas/creat...', Array)
+#10 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'nombre' in 'where clause'
+)
+
+2017-10-14 21:16:51 [::1][-][-][info][application] $_GET = [
+    'r' => 'peliculas/create'
+]
+
+$_POST = [
+    '_csrf-backend' => 'Y2J1ejhXSHEaGAwbfSJ9Jjo3MyxpO35EBVIHMmEnGiUXJTcIDDp9Mg=='
+    'Peliculas' => [
+        'nombre' => 'Buscando a Dory'
+        'clasificacion' => 'PGEI18'
+        'calificacion' => '5'
+    ]
+    'ApiOptions' => [
+        'movieFlag' => '1'
+        'movieId' => '127380'
+        'movieInformation' => '1'
+        'movieMediaContent' => '1'
+        'movieCredits' => '1'
+    ]
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    '_identity-frontend' => 'b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[11,\"9MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd\",2592000]\";}'
+    '_csrf-backend' => 'a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C\";}'
+    'advanced-backend' => 'havqndl7g55a3pj5v2nk82uuh6'
+    '_identity-backend' => 'b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1567'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryLUcjFGr3AQJjFQ61'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; _identity-frontend=b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%229MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd%22%2C2592000%5D%22%3B%7D; _csrf-backend=a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C%22%3B%7D; advanced-backend=havqndl7g55a3pj5v2nk82uuh6; _identity-backend=b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '45884'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=peliculas%2Fcreate'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508015811.393
+    'REQUEST_TIME' => 1508015811
+]
+2017-10-14 21:30:25 [::1][-][-][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'descripcion' cannot be null in /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Command.php:846
+Stack trace:
+#0 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Command.php(846): PDOStatement->execute()
+#1 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Schema.php(454): yii\db\Command->execute()
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(494): yii\db\Schema->insert('peliculas', Array)
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(635): yii\db\ActiveRecord->insert(false, NULL)
+#5 /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php(93): yii\db\BaseActiveRecord->save(false)
+#6 [internal function]: backend\controllers\PeliculasController->actionCreate()
+#7 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#10 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('peliculas/creat...', Array)
+#11 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'descripcion' cannot be null
+The SQL being executed was: INSERT INTO `peliculas` (`nombre`, `clasificacion`, `calificacion`, `descripcion`, `resena`) VALUES ('Explicación', 'PGEI18', 4, NULL, NULL) in /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Command.php(856): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `pe...')
+#1 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Schema.php(454): yii\db\Command->execute()
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(494): yii\db\Schema->insert('peliculas', Array)
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(635): yii\db\ActiveRecord->insert(false, NULL)
+#5 /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php(93): yii\db\BaseActiveRecord->save(false)
+#6 [internal function]: backend\controllers\PeliculasController->actionCreate()
+#7 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#10 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('peliculas/creat...', Array)
+#11 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1048
+    [2] => Column 'descripcion' cannot be null
+)
+
+2017-10-14 21:30:25 [::1][-][-][info][application] $_GET = [
+    'r' => 'peliculas/create'
+]
+
+$_POST = [
+    '_csrf-backend' => 'Rng4b3MySG0/AkEONkd9Oh8tfjkiXn5YIEhKJypCGjkyP3odR199Lg=='
+    'Peliculas' => [
+        'nombre' => 'Explicación'
+        'clasificacion' => 'PGEI18'
+        'calificacion' => '4'
+    ]
+    'ApiOptions' => [
+        'movieFlag' => '1'
+        'movieId' => '254391'
+        'movieInformation' => '1'
+        'movieMediaContent' => '1'
+        'movieCredits' => '1'
+    ]
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    '_identity-frontend' => 'b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[11,\"9MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd\",2592000]\";}'
+    '_csrf-backend' => 'a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C\";}'
+    'advanced-backend' => 'havqndl7g55a3pj5v2nk82uuh6'
+    '_identity-backend' => 'b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1564'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarydaAs7BSfeAjYhHtk'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; _identity-frontend=b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%229MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd%22%2C2592000%5D%22%3B%7D; _csrf-backend=a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C%22%3B%7D; advanced-backend=havqndl7g55a3pj5v2nk82uuh6; _identity-backend=b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '52554'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=peliculas%2Fcreate'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508016625.368
+    'REQUEST_TIME' => 1508016625
+]
+2017-10-14 21:36:36 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\ParticipantesSearch::apellidos in /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('apellidos')
+#1 /var/www/html/cinema/advanced/common/models/ParticipantesSearch.php(66): yii\db\BaseActiveRecord->__get('apellidos')
+#2 /var/www/html/cinema/advanced/backend/controllers/ParticipantesController.php(41): common\models\ParticipantesSearch->search(Array)
+#3 [internal function]: backend\controllers\ParticipantesController->actionIndex()
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#7 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('participantes', Array)
+#8 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#10 {main}
+2017-10-14 21:36:36 [::1][-][-][info][application] $_GET = [
+    'r' => 'participantes'
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    '_identity-frontend' => 'b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[11,\"9MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd\",2592000]\";}'
+    '_csrf-backend' => 'a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C\";}'
+    'advanced-backend' => 'havqndl7g55a3pj5v2nk82uuh6'
+    '_identity-backend' => 'b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=peliculas%2Fview&id=103'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; _identity-frontend=b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%229MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd%22%2C2592000%5D%22%3B%7D; _csrf-backend=a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C%22%3B%7D; advanced-backend=havqndl7g55a3pj5v2nk82uuh6; _identity-backend=b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '54440'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=participantes'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=participantes'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508016996.65
+    'REQUEST_TIME' => 1508016996
+]
+2017-10-14 21:38:22 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\ParticipantesSearch::apellidos in /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('apellidos')
+#1 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php(2081): yii\db\BaseActiveRecord->__get('apellidos')
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php(1264): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\ParticipantesSearch), 'apellidos')
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php(1313): yii\helpers\BaseHtml::activeInput('text', Object(common\models\ParticipantesSearch), 'apellidos', Array)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/DataColumn.php(193): yii\helpers\BaseHtml::activeTextInput(Object(common\models\ParticipantesSearch), 'apellidos', Array)
+#5 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/Column.php(118): yii\grid\DataColumn->renderFilterCellContent()
+#6 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(449): yii\grid\Column->renderFilterCell()
+#7 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(414): yii\grid\GridView->renderFilters()
+#8 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(346): yii\grid\GridView->renderTableHeader()
+#9 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/widgets/BaseListView.php(155): yii\grid\GridView->renderItems()
+#10 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{items}')
+#11 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/widgets/BaseListView.php(130): yii\grid\GridView->renderSection('{items}')
+#12 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#13 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/widgets/BaseListView.php(133): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#14 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#15 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#16 /var/www/html/cinema/advanced/backend/views/participantes/index.php(22): yii\base\Widget::widget(Array)
+#17 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(328): require('/var/www/html/c...')
+#18 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/c...', Array)
+#19 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/c...', Array, Object(backend\controllers\ParticipantesController))
+#20 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(backend\controllers\ParticipantesController))
+#21 /var/www/html/cinema/advanced/backend/controllers/ParticipantesController.php(45): yii\base\Controller->render('index', Array)
+#22 [internal function]: backend\controllers\ParticipantesController->actionIndex()
+#23 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#24 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#25 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#26 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('participantes', Array)
+#27 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#29 {main}
+2017-10-14 21:38:22 [::1][-][-][info][application] $_GET = [
+    'r' => 'participantes'
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    '_identity-frontend' => 'b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[11,\"9MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd\",2592000]\";}'
+    '_csrf-backend' => 'a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C\";}'
+    'advanced-backend' => 'havqndl7g55a3pj5v2nk82uuh6'
+    '_identity-backend' => 'b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=peliculas%2Fview&id=103'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; _identity-frontend=b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%229MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd%22%2C2592000%5D%22%3B%7D; _csrf-backend=a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C%22%3B%7D; advanced-backend=havqndl7g55a3pj5v2nk82uuh6; _identity-backend=b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '54444'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=participantes'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=participantes'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508017102.614
+    'REQUEST_TIME' => 1508017102
+]
+2017-10-14 21:38:41 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\Participantes::apellidos in /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('apellidos')
+#1 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php(209): yii\db\BaseActiveRecord->__get('apellidos')
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/DataColumn.php(216): yii\helpers\BaseArrayHelper::getValue(Object(common\models\Participantes), 'apellidos')
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/DataColumn.php(227): yii\grid\DataColumn->getDataCellValue(Object(common\models\Participantes), 1, 0)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/Column.php(110): yii\grid\DataColumn->renderDataCellContent(Object(common\models\Participantes), 1, 0)
+#5 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(507): yii\grid\Column->renderDataCell(Object(common\models\Participantes), 1, 0)
+#6 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(476): yii\grid\GridView->renderTableRow(Object(common\models\Participantes), 1, 0)
+#7 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(347): yii\grid\GridView->renderTableBody()
+#8 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/widgets/BaseListView.php(155): yii\grid\GridView->renderItems()
+#9 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{items}')
+#10 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/widgets/BaseListView.php(130): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/widgets/BaseListView.php(133): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#14 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#15 /var/www/html/cinema/advanced/backend/views/participantes/index.php(22): yii\base\Widget::widget(Array)
+#16 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(328): require('/var/www/html/c...')
+#17 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/c...', Array)
+#18 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/c...', Array, Object(backend\controllers\ParticipantesController))
+#19 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(backend\controllers\ParticipantesController))
+#20 /var/www/html/cinema/advanced/backend/controllers/ParticipantesController.php(45): yii\base\Controller->render('index', Array)
+#21 [internal function]: backend\controllers\ParticipantesController->actionIndex()
+#22 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#23 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#24 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#25 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('participantes', Array)
+#26 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#28 {main}
+2017-10-14 21:38:41 [::1][-][-][info][application] $_GET = [
+    'r' => 'participantes'
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    '_identity-frontend' => 'b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[11,\"9MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd\",2592000]\";}'
+    '_csrf-backend' => 'a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C\";}'
+    'advanced-backend' => 'havqndl7g55a3pj5v2nk82uuh6'
+    '_identity-backend' => 'b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=peliculas%2Fview&id=103'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; _identity-frontend=b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%229MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd%22%2C2592000%5D%22%3B%7D; _csrf-backend=a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C%22%3B%7D; advanced-backend=havqndl7g55a3pj5v2nk82uuh6; _identity-backend=b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '54448'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=participantes'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=participantes'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508017121.785
+    'REQUEST_TIME' => 1508017121
+]
+2017-10-14 21:39:32 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\Participantes::apellidos in /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('apellidos')
+#1 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php(209): yii\db\BaseActiveRecord->__get('apellidos')
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/DataColumn.php(216): yii\helpers\BaseArrayHelper::getValue(Object(common\models\Participantes), 'apellidos')
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/DataColumn.php(227): yii\grid\DataColumn->getDataCellValue(Object(common\models\Participantes), 1, 0)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/Column.php(110): yii\grid\DataColumn->renderDataCellContent(Object(common\models\Participantes), 1, 0)
+#5 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(507): yii\grid\Column->renderDataCell(Object(common\models\Participantes), 1, 0)
+#6 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(476): yii\grid\GridView->renderTableRow(Object(common\models\Participantes), 1, 0)
+#7 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(347): yii\grid\GridView->renderTableBody()
+#8 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/widgets/BaseListView.php(155): yii\grid\GridView->renderItems()
+#9 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{items}')
+#10 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/widgets/BaseListView.php(130): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/widgets/BaseListView.php(133): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#14 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#15 /var/www/html/cinema/advanced/backend/views/participantes/index.php(22): yii\base\Widget::widget(Array)
+#16 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(328): require('/var/www/html/c...')
+#17 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/c...', Array)
+#18 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/c...', Array, Object(backend\controllers\ParticipantesController))
+#19 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(backend\controllers\ParticipantesController))
+#20 /var/www/html/cinema/advanced/backend/controllers/ParticipantesController.php(45): yii\base\Controller->render('index', Array)
+#21 [internal function]: backend\controllers\ParticipantesController->actionIndex()
+#22 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#23 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#24 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#25 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('participantes', Array)
+#26 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#28 {main}
+2017-10-14 21:39:32 [::1][-][-][info][application] $_GET = [
+    'r' => 'participantes'
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    '_identity-frontend' => 'b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[11,\"9MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd\",2592000]\";}'
+    '_csrf-backend' => 'a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C\";}'
+    'advanced-backend' => 'havqndl7g55a3pj5v2nk82uuh6'
+    '_identity-backend' => 'b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=peliculas%2Fview&id=103'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; _identity-frontend=b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%229MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd%22%2C2592000%5D%22%3B%7D; _csrf-backend=a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C%22%3B%7D; advanced-backend=havqndl7g55a3pj5v2nk82uuh6; _identity-backend=b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '54452'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=participantes'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=participantes'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508017172.822
+    'REQUEST_TIME' => 1508017172
+]
+2017-10-14 21:39:57 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\Participantes::apellidos in /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('apellidos')
+#1 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php(209): yii\db\BaseActiveRecord->__get('apellidos')
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/DataColumn.php(216): yii\helpers\BaseArrayHelper::getValue(Object(common\models\Participantes), 'apellidos')
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/DataColumn.php(227): yii\grid\DataColumn->getDataCellValue(Object(common\models\Participantes), 1, 0)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/Column.php(110): yii\grid\DataColumn->renderDataCellContent(Object(common\models\Participantes), 1, 0)
+#5 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(507): yii\grid\Column->renderDataCell(Object(common\models\Participantes), 1, 0)
+#6 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(476): yii\grid\GridView->renderTableRow(Object(common\models\Participantes), 1, 0)
+#7 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(347): yii\grid\GridView->renderTableBody()
+#8 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/widgets/BaseListView.php(155): yii\grid\GridView->renderItems()
+#9 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{items}')
+#10 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/widgets/BaseListView.php(130): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/widgets/BaseListView.php(133): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#14 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#15 /var/www/html/cinema/advanced/backend/views/participantes/index.php(22): yii\base\Widget::widget(Array)
+#16 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(328): require('/var/www/html/c...')
+#17 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/c...', Array)
+#18 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/c...', Array, Object(backend\controllers\ParticipantesController))
+#19 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(backend\controllers\ParticipantesController))
+#20 /var/www/html/cinema/advanced/backend/controllers/ParticipantesController.php(45): yii\base\Controller->render('index', Array)
+#21 [internal function]: backend\controllers\ParticipantesController->actionIndex()
+#22 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#23 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#24 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#25 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('participantes', Array)
+#26 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#28 {main}
+2017-10-14 21:39:57 [::1][-][-][info][application] $_GET = [
+    'r' => 'participantes'
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    '_identity-frontend' => 'b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:47:\"[11,\"9MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd\",2592000]\";}'
+    '_csrf-backend' => 'a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C\";}'
+    'advanced-backend' => 'havqndl7g55a3pj5v2nk82uuh6'
+    '_identity-backend' => 'b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=proyeccion'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; _identity-frontend=b44bee68065600b096d2a9287bd6fa006361c6cf808cdb6f38df75170ba0359ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%229MomwLGTPMpRiU3eDROa1ik_FNoD0Fnd%22%2C2592000%5D%22%3B%7D; _csrf-backend=a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C%22%3B%7D; advanced-backend=havqndl7g55a3pj5v2nk82uuh6; _identity-backend=b427626f66482d6451100a44184789a6c629e3151271c9f680a6ed51d8252b8da%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22kyU7lAje2gIfiZzgC_7MbZUIkH0T_VMY%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '54458'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=participantes'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=participantes'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508017197.065
+    'REQUEST_TIME' => 1508017197
+]
+2017-10-14 21:59:18 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\Participantes::apellidos in /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('apellidos')
+#1 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php(2081): yii\db\BaseActiveRecord->__get('apellidos')
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php(1264): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\Participantes), 'apellidos')
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php(1313): yii\helpers\BaseHtml::activeInput('text', Object(common\models\Participantes), 'apellidos', Array)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/widgets/ActiveField.php(395): yii\helpers\BaseHtml::activeTextInput(Object(common\models\Participantes), 'apellidos', Array)
+#5 /var/www/html/cinema/advanced/backend/views/participantes/_form.php(17): yii\widgets\ActiveField->textInput(Array)
+#6 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(328): require('/var/www/html/c...')
+#7 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/c...', Array)
+#8 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/c...', Array, NULL)
+#9 /var/www/html/cinema/advanced/backend/views/participantes/create.php(18): yii\base\View->render('_form', Array)
+#10 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(328): require('/var/www/html/c...')
+#11 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/c...', Array)
+#12 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/c...', Array, Object(backend\controllers\ParticipantesController))
+#13 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('create', Array, Object(backend\controllers\ParticipantesController))
+#14 /var/www/html/cinema/advanced/backend/controllers/ParticipantesController.php(86): yii\base\Controller->render('create', Array)
+#15 [internal function]: backend\controllers\ParticipantesController->actionCreate()
+#16 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#18 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#19 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('participantes/c...', Array)
+#20 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#22 {main}
+2017-10-14 21:59:18 [::1][-][-][info][application] $_GET = [
+    'r' => 'participantes/create'
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    '_csrf-backend' => 'a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C\";}'
+    '_csrf-frontend' => '95c37541721380dc43ad157119f12ea0c656ea46f546b0e6a05fea08246000f5a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Z3ZHWC7AwdzeSV7I4EfI3mzT9ZT9-hub\";}'
+    'advanced-frontend' => 'hl8gtn6jrvv4nr92o861leev56'
+    'advanced-backend' => '8gt6n2ljvr92ae61e3doo2gs87'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=participantes'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; _csrf-backend=a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C%22%3B%7D; _csrf-frontend=95c37541721380dc43ad157119f12ea0c656ea46f546b0e6a05fea08246000f5a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Z3ZHWC7AwdzeSV7I4EfI3mzT9ZT9-hub%22%3B%7D; advanced-frontend=hl8gtn6jrvv4nr92o861leev56; advanced-backend=8gt6n2ljvr92ae61e3doo2gs87; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '54816'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=participantes%2Fcreate'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=participantes%2Fcreate'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508018358.762
+    'REQUEST_TIME' => 1508018358
+]
+2017-10-14 22:19:51 [::1][1][8gt6n2ljvr92ae61e3doo2gs87][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: The requested page does not exist. in /var/www/html/cinema/advanced/backend/controllers/ProyeccionController.php:125
+Stack trace:
+#0 /var/www/html/cinema/advanced/backend/controllers/ProyeccionController.php(55): backend\controllers\ProyeccionController->findModel('1')
+#1 [internal function]: backend\controllers\ProyeccionController->actionView('1')
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#5 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('proyeccion/view', Array)
+#6 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#8 {main}
+2017-10-14 22:19:51 [::1][1][8gt6n2ljvr92ae61e3doo2gs87][info][application] $_GET = [
+    'r' => 'proyeccion/view'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    '_csrf-backend' => 'a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C\";}'
+    '_csrf-frontend' => '95c37541721380dc43ad157119f12ea0c656ea46f546b0e6a05fea08246000f5a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Z3ZHWC7AwdzeSV7I4EfI3mzT9ZT9-hub\";}'
+    'advanced-frontend' => 'hl8gtn6jrvv4nr92o861leev56'
+    'advanced-backend' => '8gt6n2ljvr92ae61e3doo2gs87'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=proyeccion%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; _csrf-backend=a63aed645cffdde4cde69cbd2336e491e5ea3bb78f817039643aed640f910664a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22yzyaEu5WYUFVQl65f0rHYpRTtGBr4m5C%22%3B%7D; _csrf-frontend=95c37541721380dc43ad157119f12ea0c656ea46f546b0e6a05fea08246000f5a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Z3ZHWC7AwdzeSV7I4EfI3mzT9ZT9-hub%22%3B%7D; advanced-frontend=hl8gtn6jrvv4nr92o861leev56; advanced-backend=8gt6n2ljvr92ae61e3doo2gs87; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '55196'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=proyeccion%2Fview&id=1'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=proyeccion%2Fview&id=1'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508019591.926
+    'REQUEST_TIME' => 1508019591
+]
+2017-10-18 19:06:09 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'clasificacion' at row 1 in /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Command.php:846
+Stack trace:
+#0 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Command.php(846): PDOStatement->execute()
+#1 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Schema.php(454): yii\db\Command->execute()
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(494): yii\db\Schema->insert('peliculas', Array)
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(635): yii\db\ActiveRecord->insert(false, NULL)
+#5 /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php(93): yii\db\BaseActiveRecord->save(false)
+#6 [internal function]: backend\controllers\PeliculasController->actionCreate()
+#7 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#10 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('peliculas/creat...', Array)
+#11 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'clasificacion' at row 1
+The SQL being executed was: INSERT INTO `peliculas` (`nombre`, `clasificacion`, `calificacion`, `descripcion`, `resena`) VALUES ('Rogue One', '', NULL, 'Una rebeliÃ³n construida sobre la esperanza', 'El Imperio GalÃ¡ctico ha terminado de construir el arma mÃ¡s poderosa de todas, la Estrella de la muerte, pero un grupo de rebeldes decide realizar una misiÃ³n de muy alto riesgo: robar los planos de dicha estaciÃ³n antes de que entre en operaciones, mientras se enfrentan tambiÃ©n al poderoso Lord Sith conocido como Darth Vader, discÃ­pulo del despiadado Emperador Palpatine.') in /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Command.php(856): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `pe...')
+#1 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/Schema.php(454): yii\db\Command->execute()
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(494): yii\db\Schema->insert('peliculas', Array)
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(461): yii\db\ActiveRecord->insertInternal(NULL)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(635): yii\db\ActiveRecord->insert(false, NULL)
+#5 /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php(93): yii\db\BaseActiveRecord->save(false)
+#6 [internal function]: backend\controllers\PeliculasController->actionCreate()
+#7 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#10 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('peliculas/creat...', Array)
+#11 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 01000
+    [1] => 1265
+    [2] => Data truncated for column 'clasificacion' at row 1
+)
+
+2017-10-18 19:06:06 [::1][-][-][info][application] $_GET = [
+    'r' => 'peliculas/create'
+]
+
+$_POST = [
+    '_csrf-backend' => 'aVJvU1FaczINKx0hCXcqZi0QBGYIOTwFCDw/OCExOFMOJBw/aRxCUw=='
+    'Peliculas' => [
+        'nombre' => 'Rogue One'
+        'clasificacion' => ''
+        'calificacion' => ''
+    ]
+    'ApiOptions' => [
+        'movieFlag' => '1'
+        'movieId' => '330459'
+        'movieInformation' => '1'
+        'movieMediaContent' => '1'
+        'movieCredits' => '1'
+    ]
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    'advanced-backend' => 'k6fjii7h7elrmai8pbpjs6ms20'
+    '_csrf-backend' => '877f655a30e30ace947e1f4752b0ccc0fbbdbf8a505decf83d3c50e3d0c29620a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"dyrrX-YTDBk5YcO7anPkpkKagvsl8F1a\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1554'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryPimujkU7HksQgdau'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; advanced-backend=k6fjii7h7elrmai8pbpjs6ms20; _csrf-backend=877f655a30e30ace947e1f4752b0ccc0fbbdbf8a505decf83d3c50e3d0c29620a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22dyrrX-YTDBk5YcO7anPkpkKagvsl8F1a%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '38430'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=peliculas%2Fcreate'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508353566.514
+    'REQUEST_TIME' => 1508353566
+]
+2017-10-19 00:20:11 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php:91
+Stack trace:
+#0 /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php(91): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/c...', 91, Array)
+#1 [internal function]: backend\controllers\PeliculasController->actionCreate()
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#5 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('peliculas/creat...', Array)
+#6 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#8 {main}
+2017-10-19 00:20:10 [::1][-][-][info][application] $_GET = [
+    'r' => 'peliculas/create'
+]
+
+$_POST = [
+    '_csrf-backend' => 'ekcuakZVTDY0HnZdP2UbAR0zbyQvIi8AKzd6UiEBAm8XEUwTIjoIWg=='
+    'Peliculas' => [
+        'nombre' => 'Buscando a nemo'
+        'clasificacion' => 'PGEI18'
+        'calificacion' => '4'
+    ]
+    'ApiOptions' => [
+        'movieFlag' => '1'
+        'movieId' => '12'
+        'movieInformation' => '1'
+        'movieMediaContent' => '1'
+        'movieCredits' => '1'
+    ]
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    'advanced-frontend' => 'gbbe1ek5hgm1bg7fdslf6eimp2'
+    '_csrf-frontend' => '51f6b8675545d232967dde9ca24d3587fe7a0e5b53451a4344881dd74e97f0fba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"SHM3zbY9LS_K5n-HkqgHHzlxuHmGu5f1\";}'
+    '_identity-frontend' => '8a1ea3077fc64a006848e915dcc285cef26d5f91c9a334f859da8d175b0955e5a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+    'advanced-backend' => 'g2tks9pb9jd4sv956r3dcqovb4'
+    '_csrf-backend' => 'b44377316c772eace21617c900db83ed66e33f1b511bf9bf27481b67ac43cbcaa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"NYX7y0W7gtANiwc6QpT8gTNYmVbydoDl\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1563'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarynDRnxdCAYFhVB4Dk'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; advanced-frontend=gbbe1ek5hgm1bg7fdslf6eimp2; _csrf-frontend=51f6b8675545d232967dde9ca24d3587fe7a0e5b53451a4344881dd74e97f0fba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22SHM3zbY9LS_K5n-HkqgHHzlxuHmGu5f1%22%3B%7D; _identity-frontend=8a1ea3077fc64a006848e915dcc285cef26d5f91c9a334f859da8d175b0955e5a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D; advanced-backend=g2tks9pb9jd4sv956r3dcqovb4; _csrf-backend=b44377316c772eace21617c900db83ed66e33f1b511bf9bf27481b67ac43cbcaa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22NYX7y0W7gtANiwc6QpT8gTNYmVbydoDl%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '36932'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=peliculas%2Fcreate'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508372410.37
+    'REQUEST_TIME' => 1508372410
+]
+2017-10-19 00:23:10 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property of non-object in /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php:128
+Stack trace:
+#0 /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php(128): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/c...', 128, Array)
+#1 [internal function]: backend\controllers\PeliculasController->actionCreate()
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('create', Array)
+#5 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('peliculas/creat...', Array)
+#6 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#8 {main}
+2017-10-19 00:23:09 [::1][-][-][info][application] $_GET = [
+    'r' => 'peliculas/create'
+]
+
+$_POST = [
+    '_csrf-backend' => 'ekcuakZVTDY0HnZdP2UbAR0zbyQvIi8AKzd6UiEBAm8XEUwTIjoIWg=='
+    'Peliculas' => [
+        'nombre' => 'Buscando a nemo'
+        'clasificacion' => 'PGEI18'
+        'calificacion' => '4'
+    ]
+    'ApiOptions' => [
+        'movieFlag' => '1'
+        'movieId' => '12'
+        'movieInformation' => '1'
+        'movieMediaContent' => '1'
+        'movieCredits' => '1'
+    ]
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    'advanced-frontend' => 'gbbe1ek5hgm1bg7fdslf6eimp2'
+    '_csrf-frontend' => '51f6b8675545d232967dde9ca24d3587fe7a0e5b53451a4344881dd74e97f0fba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"SHM3zbY9LS_K5n-HkqgHHzlxuHmGu5f1\";}'
+    '_identity-frontend' => '8a1ea3077fc64a006848e915dcc285cef26d5f91c9a334f859da8d175b0955e5a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+    'advanced-backend' => 'g2tks9pb9jd4sv956r3dcqovb4'
+    '_csrf-backend' => 'b44377316c772eace21617c900db83ed66e33f1b511bf9bf27481b67ac43cbcaa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"NYX7y0W7gtANiwc6QpT8gTNYmVbydoDl\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '1563'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarynDRnxdCAYFhVB4Dk'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; advanced-frontend=gbbe1ek5hgm1bg7fdslf6eimp2; _csrf-frontend=51f6b8675545d232967dde9ca24d3587fe7a0e5b53451a4344881dd74e97f0fba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22SHM3zbY9LS_K5n-HkqgHHzlxuHmGu5f1%22%3B%7D; _identity-frontend=8a1ea3077fc64a006848e915dcc285cef26d5f91c9a334f859da8d175b0955e5a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D; advanced-backend=g2tks9pb9jd4sv956r3dcqovb4; _csrf-backend=b44377316c772eace21617c900db83ed66e33f1b511bf9bf27481b67ac43cbcaa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22NYX7y0W7gtANiwc6QpT8gTNYmVbydoDl%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '37788'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=peliculas%2Fcreate'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=peliculas%2Fcreate'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508372589.047
+    'REQUEST_TIME' => 1508372589
+]
+2017-10-19 02:23:34 [::1][-][-][error][Error] Error: Class 'backend\controllers\DynamicModel' not found in /var/www/html/cinema/advanced/backend/controllers/PeliculasController.php:174
+Stack trace:
+#0 [internal function]: backend\controllers\PeliculasController->actionUpdate('5')
+#1 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('update', Array)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('peliculas/updat...', Array)
+#5 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#7 {main}
+2017-10-19 02:23:34 [::1][-][-][info][application] $_GET = [
+    'r' => 'peliculas/update'
+    'id' => '5'
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    '_csrf-frontend' => '51f6b8675545d232967dde9ca24d3587fe7a0e5b53451a4344881dd74e97f0fba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"SHM3zbY9LS_K5n-HkqgHHzlxuHmGu5f1\";}'
+    '_csrf-backend' => 'b44377316c772eace21617c900db83ed66e33f1b511bf9bf27481b67ac43cbcaa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"NYX7y0W7gtANiwc6QpT8gTNYmVbydoDl\";}'
+    'advanced-frontend' => 'onq291lc7jp7lbl32mku8mlsc1'
+    '_identity-frontend' => '8a1ea3077fc64a006848e915dcc285cef26d5f91c9a334f859da8d175b0955e5a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+    'advanced-backend' => '1nej0gf94ddhahv41hlf6kpgp3'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=peliculas'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; _csrf-frontend=51f6b8675545d232967dde9ca24d3587fe7a0e5b53451a4344881dd74e97f0fba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22SHM3zbY9LS_K5n-HkqgHHzlxuHmGu5f1%22%3B%7D; _csrf-backend=b44377316c772eace21617c900db83ed66e33f1b511bf9bf27481b67ac43cbcaa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22NYX7y0W7gtANiwc6QpT8gTNYmVbydoDl%22%3B%7D; advanced-frontend=onq291lc7jp7lbl32mku8mlsc1; _identity-frontend=8a1ea3077fc64a006848e915dcc285cef26d5f91c9a334f859da8d175b0955e5a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D; advanced-backend=1nej0gf94ddhahv41hlf6kpgp3; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '45378'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=peliculas%2Fupdate&id=5'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=peliculas%2Fupdate&id=5'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508379814.65
+    'REQUEST_TIME' => 1508379814
+]
+2017-10-19 02:24:04 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\Participantes::apellidos in /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(286): yii\base\Component->__get('apellidos')
+#1 /var/www/html/cinema/advanced/backend/views/participantes/view.php(9): yii\db\BaseActiveRecord->__get('apellidos')
+#2 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(328): require('/var/www/html/c...')
+#3 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/c...', Array)
+#4 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/c...', Array, Object(backend\controllers\ParticipantesController))
+#5 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('view', Array, Object(backend\controllers\ParticipantesController))
+#6 /var/www/html/cinema/advanced/backend/controllers/ParticipantesController.php(57): yii\base\Controller->render('view', Array)
+#7 [internal function]: backend\controllers\ParticipantesController->actionView('7')
+#8 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#11 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('participantes/v...', Array)
+#12 /var/www/html/cinema/advanced/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/cinema/advanced/backend/web/index.php(17): yii\base\Application->run()
+#14 {main}
+2017-10-19 02:24:04 [::1][-][-][info][application] $_GET = [
+    'r' => 'participantes/view'
+    'id' => '7'
+]
+
+$_COOKIE = [
+    '__ssid' => 'f3b0f846-b093-4d9a-a774-30c1e79a99c9'
+    '_csrf-frontend' => '51f6b8675545d232967dde9ca24d3587fe7a0e5b53451a4344881dd74e97f0fba:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"SHM3zbY9LS_K5n-HkqgHHzlxuHmGu5f1\";}'
+    '_csrf-backend' => 'b44377316c772eace21617c900db83ed66e33f1b511bf9bf27481b67ac43cbcaa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"NYX7y0W7gtANiwc6QpT8gTNYmVbydoDl\";}'
+    'advanced-frontend' => 'onq291lc7jp7lbl32mku8mlsc1'
+    '_identity-frontend' => '8a1ea3077fc64a006848e915dcc285cef26d5f91c9a334f859da8d175b0955e5a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+    'advanced-backend' => '1nej0gf94ddhahv41hlf6kpgp3'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/cinema/advanced/backend/web/index.php?r=participantes'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => '__ssid=f3b0f846-b093-4d9a-a774-30c1e79a99c9; _csrf-frontend=51f6b8675545d232967dde9ca24d3587fe7a0e5b53451a4344881dd74e97f0fba%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22SHM3zbY9LS_K5n-HkqgHHzlxuHmGu5f1%22%3B%7D; _csrf-backend=b44377316c772eace21617c900db83ed66e33f1b511bf9bf27481b67ac43cbcaa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22NYX7y0W7gtANiwc6QpT8gTNYmVbydoDl%22%3B%7D; advanced-frontend=onq291lc7jp7lbl32mku8mlsc1; _identity-frontend=8a1ea3077fc64a006848e915dcc285cef26d5f91c9a334f859da8d175b0955e5a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D; advanced-backend=1nej0gf94ddhahv41hlf6kpgp3; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '45550'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=participantes%2Fview&id=7'
+    'REQUEST_URI' => '/cinema/advanced/backend/web/index.php?r=participantes%2Fview&id=7'
+    'SCRIPT_NAME' => '/cinema/advanced/backend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508379844.737
+    'REQUEST_TIME' => 1508379844
+]

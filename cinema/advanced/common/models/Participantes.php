@@ -9,7 +9,6 @@ use Yii;
  *
  * @property integer $id
  * @property string $nombres
- * @property string $apellidos
  * @property string $tipo
  *
  * @property Reparto[] $repartos
@@ -31,10 +30,10 @@ class Participantes extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nombres', 'apellidos', 'tipo'], 'required'],
+            [['nombres', 'tipo'], 'required'],
             [['tipo'], 'string'],
-            [['imagen'], 'image', 'extensions' => 'jpg, png, gif'],
-            [['nombres', 'apellidos'], 'string', 'max' => 255],
+            [['imagen'], 'image', 'extensions' => 'jpg, png, gif', "skipOnEmpty" => "true"],
+            [['nombres'], 'string', 'max' => 255],
         ];
     }
 
@@ -46,7 +45,6 @@ class Participantes extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'nombres' => 'Nombres',
-            'apellidos' => 'Apellidos',
             'tipo' => 'Clase',
             'imagen' => 'Fotografia del artista',
         ];

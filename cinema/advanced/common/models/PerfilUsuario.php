@@ -38,6 +38,7 @@ class PerfilUsuario extends \yii\db\ActiveRecord
             [['nombres', 'apellidos', 'telefono'], 'required', 'message' => 'El campo es requerido'],
             [['nombres', 'apellidos'], 'match', 'pattern' => '/^[a-zA-Záéíóú ]{1,70}$/', 'message' => 'Introduzca un nombre válido de 70 caracteres máximo'],
             [['id'], 'integer'],
+            [['conekta_id'], 'string'],
             ['telefono', 'match', 'pattern' => '/^[\d]{10}$/i', 'message' => 'El numero de teléfono debe contener 10 dígitos.'],
             [['file'], 'image', 'extensions' => 'png, jpg'],
             [['nombres', 'apellidos', 'foto_perfil'], 'string', 'max' => 255],
@@ -56,6 +57,7 @@ class PerfilUsuario extends \yii\db\ActiveRecord
             'nombres' => 'Nombres',
             'apellidos' => 'Apellidos',
             'telefono' => 'Teléfono',
+            'conekta_id' => 'ID de Conekta',
         ];
     }
 

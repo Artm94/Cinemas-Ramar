@@ -35,8 +35,7 @@ use yii\helpers\Url;
                 <img style="height: 220px; width:180px" src="<?= $participante->fotografia ?>">
               </div>
               <div class="caption">
-                <p class="text-center"><b><?= $participante->nombres . ' ' . $participante->apellidos ?></b></p>
-                <p class="text-center"><?= $participante->tipo ?></p>
+                <p class="text-center"><b><?= $participante->nombres ?></b></p>
               </div>
               </div>
             <?php endforeach; ?>

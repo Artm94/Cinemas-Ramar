@@ -18,7 +18,7 @@ class DashboardAsset extends AssetBundle
 		//http://localhost/themes/AdminLTE-2.3.11/
 		
         'css/bootstrap.min.css',
-        '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+        //'//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
 		'fonts/font-awesome.min.css',
 	//	'code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css',
 		'fonts/ionicons.min.css',
@@ -37,7 +37,7 @@ class DashboardAsset extends AssetBundle
 	'js/raphael-min.js',
 	
 	'plugins/sparkline/jquery.sparkline.min.js',
-	'plugins/slimScroll/jquery.slimScroll.min.js',
+	//'plugins/slimScroll/jquery.slimScroll.min.js',
 	'plugins/fastclick/fastclick.min.js',
 	'js/app.min.js',
 	//'js/dashboard.js',

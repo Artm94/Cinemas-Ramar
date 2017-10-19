@@ -156,7 +156,8 @@ $this->title = "Perfil de $profile->nombres  $profile->apellidos";
           </div>
 
 <?php $script = <<< JS
-$('body').on('beforeSubmit', 'form#{$profile->formName()}', function(event){
+$('body').on('submit', 'form#{$profile->formName()}', function(event){
+  event.preventDefault();
     var action = $(this).attr('action');
     var formData = new FormData($(this)[0]);
     $.ajax({
@@ -179,7 +180,8 @@ $('body').on('beforeSubmit', 'form#{$profile->formName()}', function(event){
     });
     return false;
 });
-$('body').on('beforeSubmit', 'form#{$passwordModel->formName()}', function(event){
+$('body').on('submit', 'form#{$passwordModel->formName()}', function(event){
+  event.preventDefault;
     var \$form = $(this);
     var action = $(this).attr('action');
     var formData = new FormData($(this)[0]);
@@ -203,7 +205,8 @@ $('body').on('beforeSubmit', 'form#{$passwordModel->formName()}', function(event
     });
     return false;
 });
-$('body').on('beforeSubmit', 'form#{$deleteModel->formName()}', function(event){
+$('body').on('submit', 'form#{$deleteModel->formName()}', function(event){
+  event.preventDefault;
     var \$form = $(this);
     var action = $(this).attr('action');
     var formData = new FormData($(this)[0]);

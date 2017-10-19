@@ -10,7 +10,7 @@ use common\models\Boletos;
 use common\models\PerfilUsuario;
 use common\models\User;
 use yii\web\NotFoundHttpException;
-require_once("../../common/custom/conektasdk/lib/Conekta.php");
+require_once("../../common/custom/conekta-php/lib/Conekta.php");
 
 class ProyeccionController extends \yii\web\Controller
 {
@@ -23,34 +23,31 @@ class ProyeccionController extends \yii\web\Controller
     	$model = new PaymentData();
         $proyeccion = $this->findModel($id);
         if($model->load(Yii::$app->request->post()) && $model->items = Yii::$app->request->post('items')){
+            \Conekta\Conekta::setApiKey("key_RqhwraedesBnkJEvzjMeKw");
+            \Conekta\Conekta::setApiVersion("2.0.0");
             $userprofile = PerfilUsuario::findOne(Yii::$app->user->id);
-            $user=User::findOne(Yii::$app->user->id);
-            $token = Yii::$app->request->post('token');            
-            //print_r($token);
-            //$client = Yii::$app->request->post("PaymentData")['card_name'];
+            $user = User::findOne(Yii::$app->user->id);
+            $token = Yii::$app->request->post('token');
             $client = $model->card_name;
-            //print_r($client);            
-            $customer = $this->createCustomer($client, $user,$userprofile, $token);
-            //echo $customer->id;                    
-            //die();
-            $src_token = $customer->default_payment_source_id;            
+            $customer;
+            if(empty($userprofile->conekta_id)){
+                $customer = $this->createCustomer($user, $userprofile);
+                $userprofile->conekta_id = $customer->id;
+                $userprofile->save();
+            }else{
+                $customer = \Conekta\Customer::find($userprofile->conekta_id);
+            }            
             $compras = array();
             $amount = 0;
             foreach ($model->items as $item) {
             $values = explode(',', $item);
             $compras[] = ['bl' . uniqid(), Yii::$app->user->identity->id, $proyeccion->id, $values[1], $values[0], date('Y-m-d H:s:i'), $proyeccion->precio];
-            $amount+= intval($proyeccion->precio);
+            $amount+= intval($proyeccion->precio)*100;
             }
-            $lugar = Yii::$app->request->post('items');
-            //print_r($lugar);
-            //$lugar_row = explode(",",$lugar[0]);
-            //echo $lugar_row[1].$lugar_row[0];
-            //print_r($lugar_row);            
+            $lugar = Yii::$app->request->post('items');            
             $items = $this->arrayLineItem($compras,$lugar);
-            //echo $amount;
-            $this->createOrder($items,$customer,$amount,$src_token);
-            //print_r($items);            
-            die();                   
+            $order = $this->createOrder($items,$customer,$amount,$token);           
+            //die();                   
             Yii::$app->db->createCommand()->batchInsert('boletos', ['id', 'usuario_id', 'proyeccion_id', 'numero_asiento', 'fila_asiento', 'fecha_compra', 'precio'],$compras)->execute();
 
             return $this->render('recibo', [
@@ -104,22 +101,20 @@ class ProyeccionController extends \yii\web\Controller
         }
     }
 
-    public function createCustomer($client, $user, $userprofile, $token)
+    public function createCustomer($user, $userprofile)
     {        
-        \Conekta\Conekta::setApiKey("key_RqhwraedesBnkJEvzjMeKw");
-        \Conekta\Conekta::setApiVersion("2.0.0");
         try {
           $customer = \Conekta\Customer::create(
             array(
-                "name" =>  $client,
+                "name" =>  $userprofile->nombres . ' ' . $userprofile->apellidos,
                 "email" => $user->email,
                 "phone" => strval($userprofile->telefono),
-                "payment_sources" => array(
+                /*"payment_sources" => array(
                     array(
                         "type" => "card",
                         "token_id" => $token
                     )
-                  )
+                  )*/
                 )
             );
           return $customer;
@@ -143,7 +138,7 @@ class ProyeccionController extends \yii\web\Controller
             //print_r($lugar_row);
             //$info = array();
             //$info[] = [];
-            $items[] = ['name' => $compra[0], 'unit_price' => intval($compra[6])+100, 'quantity'=>1,'antifraud_info'=>array('starts_at'=>date_timestamp_get($fecha), 'ends_at'=>date_timestamp_get($fecha_fin), 'ticket_class'=>"VIP",'seat_number'=>$sitio)];
+            $items[] = ['name' => $compra[0], 'unit_price' => ($compra[6]*100), 'quantity'=>1,'antifraud_info'=>array('starts_at'=>date_timestamp_get($fecha), 'ends_at'=>date_timestamp_get($fecha_fin), 'ticket_class'=>"VIP",'seat_number'=>$sitio)];
             $indice++;
         }
         return $items;
@@ -160,18 +155,19 @@ class ProyeccionController extends \yii\web\Controller
             "customer_info" => array(
                                     "customer_id" => $customer->id
                                 ), //customer_info            
-            "metadata" => array("reference" => uniqid(), "more_info" => "some description"),
+            "metadata" => array("reference" => uniqid(), "more_info" => "Movie ticket"),
             "charges" => array(                
                 array(
                     "payment_method" => array( 
-                        "payment_source_id" => $token,
+                        "token_id" => $token,
                         "type" => "card"                        
                     ),//payment_method
-                "amount" => $total+200
+                "amount" => $total
                 ) //first charge        
             ) //charges
             )//order
             );
+            return $order;
         } catch (\Conekta\ProccessingError $error){
             echo $error->getMesage();
         } catch (\Conekta\ParameterValidationError $error){

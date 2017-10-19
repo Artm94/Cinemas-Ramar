@@ -66,7 +66,7 @@ class ProyeccionController extends Controller
         $model = new Proyeccion();
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            $comprobar = Proyeccion::find()->where(['pelicula_id' => $model->pelicula_id, 'fecha_funcion' => $model->fecha_funcion, 'sala_id' => $model->sala_id])->all();
+            $comprobar = Proyeccion::find()->where(['pelicula_id' => $model->pelicula_id])->andWhere(['fecha_funcion' => $model->fecha_funcion])->andWhere(['sala_id' => $model->sala_id])->all();
             if(empty($comprobar)){
                 $model->save();
                 return $this->redirect(['view', 'id' => $model->id]);

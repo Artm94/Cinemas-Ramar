@@ -5,6 +5,7 @@ namespace backend\controllers;
 use Yii;
 use common\models\Peliculas;
 use common\models\PeliculasSearch;
+use common\models\Participantes;
 use common\models\Contenido;
 use common\models\Reparto;
 use backend\models\Model;
@@ -12,8 +13,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
-use yii\base\DynamicModel;
 use common\custom\MovieFinder;
+use backend\models\ApiOptions;
 use yii\web\UploadedFile;
 use yii\helpers\Url;
 /**
@@ -73,87 +74,87 @@ class PeliculasController extends Controller
         $model = new Peliculas();
         $modelsContenidos = [new Contenido];
         $modelsRepartos = [new Reparto];
-
-        $apiData = new DynamicModel(['apiFlag']);
-        $apiData->addRule(['apiFlag'], 'integer');
-
+        $modelApiOptions = new ApiOptions();
+        $modelApiOptions->load(Yii::$app->request->post());
         if ($model->load(Yii::$app->request->post())) {
-            //Reparto de la pelicula
-            $modelsReparto = Model::createMultiple(Reparto::classname());
-            Model::loadMultiple($modelsReparto, Yii::$app->request->post());
-            // Valida los campos
-            $valid = $model->validate();
-            $valid = Model::validateMultiple($modelsReparto) && $valid;
-            
-            if ($valid) {
-                $transaction = \Yii::$app->db->beginTransaction();
-                try {
-                    if ($flag = $model->save(false)) {
-                        //Cargar contenido
-                        if($apiData->load(Yii::$app->request->post()) && $apiData->validate()){
-                            //Contenido Online
-                            $finder = new MovieFinder('e01a182bdeed3afc056d41564eba1bdd', 'es');
-                            $movie = $finder->getMovieById($apiData->apiFlag);
-                            $data[] = [$model->id,$model->nombre . ' poster',$finder->getImage($movie->poster_path),'portada'];
-                            $data[] = [$model->id,$model->nombre . ' backdrop',$finder->getImage($movie->backdrop_path, 'w1920'),'fondo'];
-                            $videos = $finder->getVideosById($apiData->apiFlag, 'en');
-                            if(count($videos) > 0){
+            //echo "Carga modelo POST";
+            $transaction = \Yii::$app->db->beginTransaction();
+            try{
+                //print_r(Yii::$app->request->post());
+                //print_r($modelApiOptions);
+                if($modelApiOptions->movieFlag){
+                    //echo "Carga movie flag";
+                    $finder = new MovieFinder('e01a182bdeed3afc056d41564eba1bdd', 'es');
+                    $movie = $finder->getMovieById($modelApiOptions->movieId);
+                    if($modelApiOptions->movieInformation){
+                        //echo "carga movieInformation";
+                        $model->descripcion = $movie->tagline;
+                        $model->resena = $movie->overview;
+                        $model->save(false);
+                        //echo "guarda modelo";
+                    }
+                    if($modelApiOptions->movieMediaContent){
+                        //echo "carga media";
+                        $data = array();
+                        $data[] = [$model->id,$model->nombre . ' poster',$finder->getImage($movie->poster_path),'portada'];
+                        $data[] = [$model->id,$model->nombre . ' backdrop',$finder->getImage($movie->backdrop_path, 'w1920'),'fondo'];
+                        $videos = $finder->getVideosById($modelApiOptions->movieId, 'en');
+                        if(count($videos) > 0){
                                 foreach ($videos as $video) {
                                     if($video->site = 'YouTube' && $video->type == 'Trailer'){
                                         $data[] = [$model->id,$video->name,'https://www.youtube.com/embed/'.$video->key,'trailer'];
                                     }
                                 }
                             }
-                            foreach ($movie->images->backdrops as $image) {
+                        foreach ($movie->images->backdrops as $image) {
                                 $data[] = [$model->id,$model->nombre . ' image',$finder->getImage($image->file_path, 'w1920'),'imagen'];
                             }
+                        Yii::$app->db->createCommand()->batchInsert('contenido', ['pelicula_id', 'nombre', 'url', 'tipo'],$data)->execute();
+                        //echo "guarda media";        
+                    }
 
-                            Yii::$app->db->createCommand()->batchInsert('contenido', ['pelicula_id', 'nombre', 'url', 'tipo'],$data)->execute();
-
-                        }else{
-                            //Contenido audiovisual de la pelicula offline
-                            $modelsContenido = Model::createMultiple(Contenido::classname());
-                            Model::loadMultiple($modelsContenido, Yii::$app->request->post());
-                            //Valida contenido offline
-                            $validContenido = Model::validateMultiple($modelsContenido);
-                            if($validContenido){
-                                foreach ($modelsContenido as $index => $modelContenido) {
-                                $modelContenido->file = UploadedFile::getInstance($modelContenido, "[{$index}]file");
-                                if(!empty($modelContenido->file)){
-                                    $modelContenido->file->saveAs('img/movies/' . $modelContenido->nombre . $modelContenido->tipo . '.' . $modelContenido->file->extension);
-                                    $modelContenido->url = Url::to('@web') . 'img/movies/' . $modelContenido->nombre . $modelContenido->tipo . '.' . $modelContenido->file->extension;
+                    if($modelApiOptions->movieCredits){
+                        //echo "carga credits";
+                        $participantes = array();
+                        $peliculaParticipantes = array();
+                        $credits = $movie->credits->cast;
+                        foreach ($credits as $actor) {
+                            $participante = Participantes::find()->where(['nombres' => $actor->name])->orWhere(['id' => $actor->id])->one();
+                            if(empty($participante)){
+                                if(!empty($actor->profile_path)){
+                                    $participantes[] = [$actor->id, $actor->name, "actor", $finder->getImage($actor->profile_path)];
+                                    $peliculaParticipantes[] = [$model->id, $actor->id];
                                 }
-                                $modelContenido->pelicula_id = $model->id;
-                                if (! ($flag = $modelContenido->save(false))) {
-                                    $transaction->rollBack();
-                                    break;
-                                }
-                                }
+                                //echo "agregar actor";
+                            }else{
+                                $peliculaParticipantes[] = [$model->id, $participante->id];
+                                //echo "enlaza actor";
                             }
                         }
-                        //Cargar reparto
-                        foreach ($modelsReparto as $modelReparto) {
-                            $modelReparto->pelicula_id = $model->id;
-                            if (!($flag = $modelReparto->save(false))) {
-                                $transaction->rollBack();
-                                break;
-                            }
-                        }
+
+                        Yii::$app->db->createCommand()->batchInsert('participantes', ['id', 'nombres', 'tipo', 'fotografia'],$participantes)->execute();
+                        Yii::$app->db->createCommand()->batchInsert('reparto', ['pelicula_id', 'participante_id'],$peliculaParticipantes)->execute();
+                        //echo "guarda actores y enlaces";
                     }
-                    if ($flag) {
-                        $transaction->commit();
-                        return $this->redirect(['view', 'id' => $model->id]);
-                    }
-                } catch (Exception $e) {
-                    $transaction->rollBack();
+
                 }
-            }
+
+            }catch (Exception $e) {
+                    $transaction->rollBack();
+                    echo $e;
+                }
+
+                $transaction->commit();
+                //echo "commit a la bd";
+                //die();
+                return $this->redirect(['view', 'id' => $model->id]);
+
         } else {
             return $this->render('create', [
                 'model' => $model,
                 'modelsContenido' => (empty($modelsContenido)) ? [new Contenido] : $modelsContenido,
                 'modelsReparto' => (empty($modelsReparto)) ? [new Reparto] : $modelsReparto,
-                'apiData' => $apiData,
+                'apiData' => $modelApiOptions,
             ]);
         }
     }

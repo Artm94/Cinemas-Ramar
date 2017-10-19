@@ -30,14 +30,33 @@ $participantesList = ArrayHelper::map(Participantes::find()->all(), 'id', 'nombr
 
     <?= $form->field($model, 'calificacion')->dropDownList(['1' => 'Estrellas: ★', '2' => 'Estrellas: ★★', '3' => 'Estrellas: ★★★', '4' => 'Estrellas: ★★★★', '5' => 'Estrellas: ★★★★★'], ['prompt' => 'Seleccione una calificación']) ?>
 
-    <?= $form->field($apiData, 'apiFlag')->checkbox(['label' => 'Obtener material audio visual directamente de Internet','uncheck' => null, 'value' => 0, 'class' => 'checkFlag']);?>
+    <?= $form->field($apiData, 'movieFlag')->checkbox(['id' => 'movieFlag']);?>
 
-    <div class="box box-solid">
+    <div id="search-movie-form" class="box box-solid hidden">
                 <div id="search-title" class="box-header">
+                    Busqueda de contenido a traves de internet
                 </div>
                 <div class="box-body">
-                    <div id="search-items" class="row">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                        <p>Escriba el nombre de la pelicula de la cual desea tomar la informacion:</p>
+                        </div>
                     </div>
+                    <div class="row">
+                        <div id="movie-group" class="input-group margin col-md-6 col-sm-12">
+                            <input id="movie-name" type="text" class="form-control">
+                                <span class="input-group-btn">
+                                  <button id="search-movie" type="button" class="btn btn-info btn-flat">Buscar</button>
+                                </span>
+                        </div>
+                    </div>
+                    <div id="search-items">
+
+                    </div>
+                    <input id="movieId" type="hidden" name="ApiOptions[movieId]">
+                    <?= $form->field($apiData, 'movieInformation')->checkbox(['id' => 'infoFlag', "class" => "disabled"]);?>
+                    <?= $form->field($apiData, 'movieMediaContent')->checkbox(['id' => 'contentFlag', "class" => "disabled"]);?>
+                    <?= $form->field($apiData, 'movieCredits')->checkbox(['id' => 'creditsFlag', "class" => "disabled"]);?>
                 </div>
             </div>
 
@@ -49,7 +68,7 @@ $participantesList = ArrayHelper::map(Participantes::find()->all(), 'id', 'nombr
             </div>
             <div class="panel-body">
                 <?php DynamicFormWidget::begin([
-                'widgetContainer' => 'dynamicform_wrapper', // required: only alphanumeric characters plus "_" [A-Za-z0-9_]
+                'widgetContainer' => 'dynamicform_contenido', // required: only alphanumeric characters plus "_" [A-Za-z0-9_]
                 'widgetBody' => '.container-items', // required: css class selector
                 'widgetItem' => '.item', // required: css class
                 'limit' => 10, // the maximum times, an element can be cloned (default 999)
@@ -57,7 +76,7 @@ $participantesList = ArrayHelper::map(Participantes::find()->all(), 'id', 'nombr
                 'insertButton' => '.add-item', // css class
                 'deleteButton' => '.remove-item', // css class
                 'model' => $modelsContenido[0],
-                'formId' => 'dynamic-form',
+                'formId' => 'dynamic-contenido',
                 'formFields' => [
                     'nombre',
                     'file',
@@ -103,7 +122,8 @@ $participantesList = ArrayHelper::map(Participantes::find()->all(), 'id', 'nombr
     </div>
     </div>
 
-    <div class="rows reparto-view">
+    <div class="reparto-container">
+        <div class="rows reparto-view">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4>Reparto de la pelicula</h4>
@@ -118,7 +138,7 @@ $participantesList = ArrayHelper::map(Participantes::find()->all(), 'id', 'nombr
                 'insertButton' => '.add-reparto', // css class
                 'deleteButton' => '.remove-reparto', // css class
                 'model' => $modelsReparto[0],
-                'formId' => 'dynamic-form',
+                'formId' => 'dynamic-reparto',
                 'formFields' => [
                     'participante_id',
                 ],
@@ -164,6 +184,7 @@ $participantesList = ArrayHelper::map(Participantes::find()->all(), 'id', 'nombr
             </div>
         </div>
     </div>
+    </div>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Crear' : 'Actualizar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
@@ -171,62 +192,146 @@ $participantesList = ArrayHelper::map(Participantes::find()->all(), 'id', 'nombr
 
     <?php
     $script = <<<JS
-    var hiddenFields;
-    $('body').on('change','.checkFlag',function(){
+    var hiddenFieldsContent;
+    var hiddenFieldsCredits;
+    $('body').on('change','#movieFlag',function(){
+        $('#notice').remove();
+        $('#sucess').remove();
         if(this.checked){
-            //$('.reparto-view').hide();
-            var title = $('#peliculas-nombre').val();
-            if(title == '' || title == undefined){
-                $('#peliculas-nombre').attr('aria-invalid',true);
-                $('.checkFlag').parent().after('<p id="notice" style="color: red;">El nombre de la pelicula no puede quedar vacio</p>');
-                return;
-            }
-            var url = 'https://api.themoviedb.org/3/search/movie?api_key=e01a182bdeed3afc056d41564eba1bdd&language=es-Es&page=1&include_adult=false&query=' + title;
-            $.get(url,function(dataJson){
-                if(dataJson.total_results > 0){
-                    var html = '';
-                    $('#search-title').html('<p>Seleccione un elemento de la busqueda</p>');
-                    dataJson.results.forEach(function(element,index){
-                        if(element.poster_path !== null){
-                            html += '<div class="col-md-2 col-xs-4">';
-                            html += '<div name="'+ element.original_title +'" id="' + element.id + '" class="search-item">';
-                            html += '<div class="thumbnail">';
-                            html += '<img src="https://image.tmdb.org/t/p/w500/'+ element.poster_path +'" alt="Lights" style="height: 240px; width:180px">';
-                            html += '</div>';
-                            html += '<div class="caption">';
-                            html += '<p class="text-center"><strong>'+ element.original_title +'</strong></p>';
-                            html += '</div></div></div>';
-                        }
-                    });
-                    $('#search-items').html(html);
-                    $('#peliculas-nombre').prop('readonly',true);
-                    hiddenFields = $('.contenido-view').parent().html();
-                    $('.contenido-view').remove();
-                }else{
-                    $('.checkFlag').parent().after('<p id="notice" style="color: red;">No se encontro informacion para esta pelicula</p>');
-                }
-            });
+            $('#search-movie-form').removeClass("hidden");
         }else{
-            $('#search-title').empty();
-            $('#search-items').empty();
-            $('#notice').remove();
-            $('#peliculas-nombre').prop('readonly',false);
-            $('.checkFlag').val('0');
-            if(!(hiddenFields == '' || hiddenFields == undefined)){
-                $('.contenido-container').html(hiddenFields);
-                hiddenFields = '';
-                $('.dynamicform_wrapper .form-group').trigger('reset');
+            $('#search-movie-form').addClass("hidden");
+            resetSearchForm();
+        }
+    });
+    $('body').on('change','#infoFlag',function(){
+        $('#notice').remove();
+        if(this.checked){
+            var id = $('#movieId').val();
+            if(!(id == '' || id == undefined)){
+                $('#peliculas-descripcion').prop('disabled',true);
+                $('#peliculas-resena').prop('disabled',true);
+            }else{
+                $('#movie-group').parent().after('<p id="notice" style="color: red;">No se ha seleccionado una fuente de informacion</p>');
+                $(this).prop('checked', false);
+                $('.field-infoFlag').trigger('reset');
+            }
+            
+        }else{
+            $('#peliculas-descripcion').prop('disabled',false);
+            $('#peliculas-resena').prop('disabled',false);
+        }
+    });
+    $('body').on('change', '#contentFlag', function(){
+        $('#notice').remove();
+        if(this.checked){
+            var id = $('#movieId').val();
+            if(!(id == '' || id == undefined)){
+                hiddenFieldsContent = $('.contenido-container').html();
+                $('.contenido-view').remove();
+            }else{
+                $('#movie-group').parent().after('<p id="notice" style="color: red;">No se ha seleccionado una fuente de informacion</p>');
+                $(this).prop('checked', false);
+                $('.field-contentFlag').trigger('reset');
+            }
+        }else{
+            if(!(hiddenFieldsContent == '' || hiddenFieldsContent == undefined)){
+                $('.contenido-container').html(hiddenFieldsContent);
+                hiddenFieldsContent = '';
+                $('.dynamicform_contenido .form-group').trigger('reset');
             }
         }
     });
-
+    $('body').on('change', '#creditsFlag', function(){
+        $('#notice').remove();
+        if(this.checked){
+            var id = $('#movieId').val();
+            if(!(id == '' || id == undefined)){
+                hiddenFieldsCredits = $('.reparto-container').html();
+                $('.reparto-view').remove();
+            }else{
+                $('#movie-group').parent().after('<p id="notice" style="color: red;">No se ha seleccionado una fuente de informacion</p>');
+                $(this).prop('checked', false);
+                $('.field-creditsFlag').trigger('reset');
+            }
+        }else{
+            if(!(hiddenFieldsCredits == '' || hiddenFieldsCredits == undefined)){
+                $('.reparto-container').html(hiddenFieldsCredits);
+                hiddenFieldsCredits = '';
+                $('.dynamicform_reparto .form-group').trigger('reset');
+            }
+        }
+    });
+    $('body').on('click', '#search-movie', function(){
+        resetSearchForm();
+        var title = $('#movie-name').val();
+        if(title == '' || title == undefined){
+                $('#peliculas-nombre').attr('aria-invalid',true);
+                $('#movie-group').parent().after('<p id="notice" style="color: red;">El nombre de la pelicula no puede quedar vacio</p>');
+                return;
+        }
+        var url = 'https://api.themoviedb.org/3/search/movie?api_key=e01a182bdeed3afc056d41564eba1bdd&language=es-Es&page=1&include_adult=false&query=' + title;
+            $.get(url,function(dataJson){
+                if(dataJson.total_results > 0){
+                    var html = '';
+                    html += '<p class="col-md-12">Seleccione una pelicula</p>';
+                    var columnCount = 0;
+                    dataJson.results.forEach(function(element,index){
+                        if(columnCount == 0){
+                            html += '<div class="row">';
+                        }
+                        if(element.poster_path !== null){
+                            html += '<div class="col-md-3 col-xs-3">';
+                            html += '<div name="'+ element.title +'" id="' + element.id + '" class="search-item thumbnail">';
+                            html += '<img src="https://image.tmdb.org/t/p/w500/'+ element.poster_path +'" alt="'+ element.title +'" style="height: 240px; width:180px">';
+                            html += '<div class="caption">';
+                            html += '<p class="text-center"><strong>'+ element.title +'</strong></p>';
+                            html += '</div></div>';
+                            html += '</div>';
+                            columnCount++;
+                        }
+                        if(columnCount == 4){
+                            html += '</div>';
+                            columnCount = 0;
+                        }
+                    });
+                    $('#search-items').html(html);
+                }else{
+                    $('#movie-group').parent().after('<p id="notice" style="color: red;">No se encontro informacion para esta pelicula</p>');
+                }
+            });
+    });
     $('body').on('click', '.search-item', function(){
         item = $(this);
         var selected = item.attr('id');
-        $('.checkFlag').val(selected);
+        $('#movieId').val(selected);
         $('#search-items').empty();
-        $('.checkFlag').parent().after('<p id="notice" style="color: green;">Se usará el contenido audiovisual de la pelicula: '+ item.attr('name') +'</p>');
+        $('#movie-group').parent().after('<p id="sucess" style="color: green;">Se usará el contenido audiovisual de la pelicula: '+ item.attr('name') +'</p>');
+        $('#infoFlag').removeClass('disabled');
+        $('#contentFlag').removeClass('disabled');
+        $('#creditsFlag').removeClass('disabled');
     });
+
+    function resetSearchForm(){
+        $('#notice').remove();
+        $('#sucess').remove();
+        $('.field-infoFlag').trigger('reset');
+        $('.field-contentFlag').trigger('reset');
+        $('.field-creditsFlag').trigger('reset');
+        $('#infoFlag').prop('checked', false);
+        $('#contentFlag').prop('checked', false);
+        $('#creditsFlag').prop('checked', false);
+        if(!(hiddenFieldsContent == '' || hiddenFieldsContent == undefined)){
+                $('.contenido-container').html(hiddenFieldsContent);
+                hiddenFieldsContent = '';
+                $('.dynamicform_contenido .form-group').trigger('reset');
+            }
+        if(!(hiddenFieldsCredits == '' || hiddenFieldsCredits == undefined)){
+                $('.reparto-container').html(hiddenFieldsCredits);
+                hiddenFieldsCredits = '';
+                $('.dynamicform_reparto .form-group').trigger('reset');
+            }
+    }
 
 JS;
 $this->registerJs($script);

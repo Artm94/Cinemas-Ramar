@@ -236,7 +236,7 @@ $this->title = "Comprar boletos para $nombre";
 		</table>
 		</div>
 		<div class="form-group">
-        	<?= Html::submitButton('Finalizar Compra', ['class' => 'btn btn-success pull-right']) ?>
+        	<?= Html::submitButton('Finalizar Compra', ['class' => 'btn btn-success pull-right', 'id'=>"comprar"]) ?>
     	</div>
 		<?php ActiveForm::end(); ?>
 	</div>
@@ -321,7 +321,7 @@ $this->title = "Comprar boletos para $nombre";
 			});
 			Conekta.setPublishableKey("key_KtAU2fwpXrdkBe9WZdjxXxw");
 			var \$form = $(this);
-		    \$form.find('button').prop('disabled', true);
+		    \$form.find('#comprar').prop('disabled', true);
         	Conekta.token.create($('#PaymentData'), conektaSuccess, conektaError);
 			return false;
 		});
