@@ -88,6 +88,7 @@ class PeliculasController extends Controller
 
                 if($modelApiOptions->movieInformation && !empty($movie)){
                         //echo "carga movieInformation";
+                    $model->duracion = $movie->runtime;
                     $model->descripcion = $movie->tagline;
                     $model->resena = $movie->overview;
                     $model->save(false);
