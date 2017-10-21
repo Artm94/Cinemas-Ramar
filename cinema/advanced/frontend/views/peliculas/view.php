@@ -31,7 +31,7 @@ use yii\helpers\Url;
          <div class="row">
            <?php if(!empty($model->participantes)): ?>
             <?php foreach ($model->participantes as $participante): ?>
-            <div class="col-md-2 col-xs-4">
+            <div class="col-md-2 col-xs-12">
               <div class="thumbnail">
                 <img style="height: 220px; width:180px" src="<?= (empty($participante->fotografia)) ? Url::to('@web/img/') . 'not_avaible_landscape.png' : $participante->fotografia ?>">
               </div>

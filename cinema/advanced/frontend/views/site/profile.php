@@ -94,7 +94,8 @@ $this->title = "Perfil de $profile->nombres  $profile->apellidos";
                   <?php $form = ActiveForm::end(); ?>
             </div>
             <div id="compras" class="tab-pane fade in">
-              <?= GridView::widget([
+              <div class="table-responsive">
+                <?= GridView::widget([
                   'dataProvider' => $boletos,
                   'columns' => [
                       ['class' => 'yii\grid\SerialColumn'],
@@ -107,6 +108,7 @@ $this->title = "Perfil de $profile->nombres  $profile->apellidos";
                       'precio'
                   ],
               ]); ?>
+              </div>
             </div>
             <div id="credenciales" class="tab-pane fade in">
             <?php $form = ActiveForm::begin(['id' => $passwordModel->formName(), 'action' => ['site/change-password'], 'method' => 'post']); ?>

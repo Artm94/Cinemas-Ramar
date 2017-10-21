@@ -23666,3 +23666,972 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1508599138.534
     'REQUEST_TIME' => 1508599138
 ]
+2017-10-21 13:11:45 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/main.php:102
+    in /var/www/html/cinema/advanced/frontend/controllers/SiteController.php:92
+2017-10-21 13:11:45 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 13:11:44 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'site'
+]
+
+$_COOKIE = [
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.0; PRA-LX3 Build/HUAWEIPRA-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33611'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=site'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508609503.942
+    'REQUEST_TIME' => 1508609503
+]
+2017-10-21 13:25:27 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/main.php:102
+    in /var/www/html/cinema/advanced/frontend/controllers/SiteController.php:92
+2017-10-21 13:25:27 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 13:25:27 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'site'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.0; PRA-LX3 Build/HUAWEIPRA-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=site'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610327.469
+    'REQUEST_TIME' => 1508610327
+]
+2017-10-21 13:26:01 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/main.php:102
+    in /var/www/html/cinema/advanced/frontend/controllers/SiteController.php:92
+2017-10-21 13:26:01 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 13:26:01 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'site'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.0; PRA-LX3 Build/HUAWEIPRA-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://192.168.0.12/cinema/advanced/frontend/web/index.php?r=site'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33702'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=site'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610361.601
+    'REQUEST_TIME' => 1508610361
+]
+2017-10-21 13:26:11 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/main.php:102
+    in /var/www/html/cinema/advanced/frontend/controllers/SiteController.php:92
+2017-10-21 13:26:11 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 13:26:11 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'site'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.0; PRA-LX3 Build/HUAWEIPRA-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://192.168.0.12/cinema/advanced/frontend/web/index.php?r=site'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33723'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=site'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610371.268
+    'REQUEST_TIME' => 1508610371
+]
+2017-10-21 13:27:39 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/main.php:102
+    in /var/www/html/cinema/advanced/frontend/controllers/SiteController.php:92
+2017-10-21 13:27:39 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 13:27:39 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'site'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.0; PRA-LX3 Build/HUAWEIPRA-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33753'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=site'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610459.366
+    'REQUEST_TIME' => 1508610459
+]
+2017-10-21 13:30:10 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/main.php:102
+    in /var/www/html/cinema/advanced/frontend/controllers/PeliculasController.php:41
+2017-10-21 13:30:10 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 13:30:10 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'peliculas/view'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.0; PRA-LX3 Build/HUAWEIPRA-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://192.168.0.12/cinema/advanced/frontend/web/index.php?r=site'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33763'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=peliculas/view&id=1'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=peliculas/view&id=1'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610610.177
+    'REQUEST_TIME' => 1508610610
+]
+2017-10-21 18:30:56 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 18:30:56 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'proyeccion/comprar'
+    'id' => '2'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.0; PRA-LX3 Build/HUAWEIPRA-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://192.168.0.12/cinema/advanced/frontend/web/index.php?r=peliculas/view&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33768'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=proyeccion/comprar&id=2'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=proyeccion/comprar&id=2'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610656.652
+    'REQUEST_TIME' => 1508610656
+]
+2017-10-21 18:30:57 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/loginLayout.php:41
+    in /var/www/html/cinema/advanced/frontend/controllers/SiteController.php:113
+2017-10-21 18:30:57 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 18:30:56 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.0; PRA-LX3 Build/HUAWEIPRA-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://192.168.0.12/cinema/advanced/frontend/web/index.php?r=peliculas/view&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33768'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610656.698
+    'REQUEST_TIME' => 1508610656
+]
+2017-10-21 13:32:33 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/main.php:102
+    in /var/www/html/cinema/advanced/frontend/controllers/PeliculasController.php:41
+2017-10-21 13:32:33 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 13:32:33 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'peliculas/view'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33790'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=peliculas/view&id=1'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=peliculas/view&id=1'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610753.059
+    'REQUEST_TIME' => 1508610753
+]
+2017-10-21 13:32:41 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/main.php:102
+    in /var/www/html/cinema/advanced/frontend/controllers/SiteController.php:92
+2017-10-21 13:32:41 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 13:32:41 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'site'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://192.168.0.12/cinema/advanced/frontend/web/index.php?r=peliculas/view&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33791'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=site'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610761.209
+    'REQUEST_TIME' => 1508610761
+]
+2017-10-21 13:32:47 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/main.php:102
+    in /var/www/html/cinema/advanced/frontend/controllers/PeliculasController.php:41
+2017-10-21 13:32:47 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 13:32:47 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'peliculas/view'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://192.168.0.12/cinema/advanced/frontend/web/index.php?r=site'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33801'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=peliculas/view&id=1'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=peliculas/view&id=1'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610767.915
+    'REQUEST_TIME' => 1508610767
+]
+2017-10-21 13:33:14 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/main.php:102
+    in /var/www/html/cinema/advanced/frontend/controllers/PeliculasController.php:41
+2017-10-21 13:33:14 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 13:33:14 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'peliculas/view'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.0; PRA-LX3 Build/HUAWEIPRA-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33803'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=peliculas/view&id=1'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=peliculas/view&id=1'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610794.385
+    'REQUEST_TIME' => 1508610794
+]
+2017-10-21 13:33:45 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/main.php:102
+    in /var/www/html/cinema/advanced/frontend/controllers/SiteController.php:92
+2017-10-21 13:33:45 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 13:33:44 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'site'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.0; PRA-LX3 Build/HUAWEIPRA-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://192.168.0.12/cinema/advanced/frontend/web/index.php?r=peliculas/view&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33815'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=site'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610824.989
+    'REQUEST_TIME' => 1508610824
+]
+2017-10-21 13:33:46 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/main.php:102
+    in /var/www/html/cinema/advanced/frontend/controllers/SiteController.php:92
+2017-10-21 13:33:46 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 13:33:46 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'site'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.0; PRA-LX3 Build/HUAWEIPRA-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://192.168.0.12/cinema/advanced/frontend/web/index.php?r=peliculas/view&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33815'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=site'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610826.305
+    'REQUEST_TIME' => 1508610826
+]
+2017-10-21 13:34:13 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/main.php:102
+    in /var/www/html/cinema/advanced/frontend/controllers/SiteController.php:92
+2017-10-21 13:34:13 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 13:34:13 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'site'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.0; PRA-LX3 Build/HUAWEIPRA-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://192.168.0.12/cinema/advanced/frontend/web/index.php?r=site'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33827'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=site'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610853.516
+    'REQUEST_TIME' => 1508610853
+]
+2017-10-21 18:34:20 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/signupLayout.php:41
+    in /var/www/html/cinema/advanced/frontend/controllers/SiteController.php:262
+2017-10-21 18:34:20 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 18:34:19 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'site/signup'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.0; PRA-LX3 Build/HUAWEIPRA-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://192.168.0.12/cinema/advanced/frontend/web/index.php?r=site'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33828'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/signup'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=site/signup'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610859.952
+    'REQUEST_TIME' => 1508610859
+]
+2017-10-21 13:34:33 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/main.php:102
+    in /var/www/html/cinema/advanced/frontend/controllers/PeliculasController.php:41
+2017-10-21 13:34:33 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 13:34:33 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'peliculas/view'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.0; PRA-LX3 Build/HUAWEIPRA-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://192.168.0.12/cinema/advanced/frontend/web/index.php?r=site'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33829'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=peliculas/view&id=1'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=peliculas/view&id=1'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610873.013
+    'REQUEST_TIME' => 1508610873
+]
+2017-10-21 13:34:50 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/main.php:102
+    in /var/www/html/cinema/advanced/frontend/controllers/SiteController.php:92
+2017-10-21 13:34:50 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 13:34:50 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'site'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.0; PRA-LX3 Build/HUAWEIPRA-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://192.168.0.12/cinema/advanced/frontend/web/index.php?r=peliculas/view&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33840'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=site'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610890.253
+    'REQUEST_TIME' => 1508610890
+]
+2017-10-21 13:35:01 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+    in /var/www/html/cinema/advanced/frontend/views/layouts/main.php:102
+    in /var/www/html/cinema/advanced/frontend/controllers/SiteController.php:92
+2017-10-21 13:35:01 [192.168.0.16][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.0.16
+2017-10-21 13:35:01 [192.168.0.16][-][-][info][application] $_GET = [
+    'r' => 'site'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW\";}'
+    'advanced-backend' => 'mf7b59vb84vnmkth2mtoieorg4'
+    '_csrf-backend' => '5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"utt4S4o3B7cptOvaPDlNdJNHY_P0ox56\";}'
+    '_identity-backend' => '24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.0.12'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SAVE_DATA' => 'on'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 7.0; PRA-LX3 Build/HUAWEIPRA-LX3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.98 Mobile Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://192.168.0.12/cinema/advanced/frontend/web/index.php?r=peliculas/view&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,es-419;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf-frontend=8476e0c4e88cd617c7c11fa62b70eb4cbf0f23733edf10f436a4bf2c0936866fa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22jFSs4nK44GiKXSgGM0h6KyNMvBFlfonW%22%3B%7D; advanced-backend=mf7b59vb84vnmkth2mtoieorg4; _csrf-backend=5c3028584e4a80f2bf14bc8e70b70a296895cb0c16324e841c83eb185ff12c9da%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22utt4S4o3B7cptOvaPDlNdJNHY_P0ox56%22%3B%7D; _identity-backend=24cd0bc9e6e777b4ba5e68436d95b4345cc2086e68913d61584495369c5cc756a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22omZyA4NWh4CThuq9zoD0ZlAhs0DkE0d9%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at 192.168.0.12 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => '192.168.0.12'
+    'SERVER_ADDR' => '192.168.0.12'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.0.16'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/cinema/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '33841'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site'
+    'REQUEST_URI' => '/cinema/advanced/frontend/web/index.php?r=site'
+    'SCRIPT_NAME' => '/cinema/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/cinema/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1508610901.313
+    'REQUEST_TIME' => 1508610901
+]

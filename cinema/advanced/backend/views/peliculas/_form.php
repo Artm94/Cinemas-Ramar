@@ -290,7 +290,7 @@ $('body').on('click', '#search-movie', function(){
                     html += '<div class="row">';
                 }
                 if(element.poster_path !== null){
-                    html += '<div class="col-md-3 col-xs-3">';
+                    html += '<div class="col-md-3 col-xs-12">';
                     html += '<div name="'+ element.title +'" id="' + element.id + '" class="search-item thumbnail">';
                     html += '<img src="https://image.tmdb.org/t/p/w500/'+ element.poster_path +'" alt="'+ element.title +'" style="height: 240px; width:180px">';
                     html += '<div class="caption">';
