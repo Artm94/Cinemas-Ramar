@@ -35,9 +35,10 @@ class Peliculas extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nombre', 'descripcion', 'resena', 'clasificacion', 'calificacion'], 'required'],
+            [['nombre', 'clasificacion', 'calificacion'], 'required'],
+            [['descripcion', 'resena', 'duracion'], 'required', 'skipOnEmpty' => 'true'],
             [['clasificacion'], 'string'],
-            [['calificacion'], 'integer'],
+            [['calificacion', 'duracion'], 'integer'],
             [['nombre', 'descripcion'], 'string','max' => '255'],
             ['resena','string'],
         ];
@@ -53,6 +54,7 @@ class Peliculas extends \yii\db\ActiveRecord
             'nombre' => 'Nombre de la película',
             'descripcion' => 'Descripcion',
             'resena' => 'Reseña',
+            'duracion' => 'Duracion de la pelicula (minutos)',
             'clasificacion' => 'Clasificación',
             'calificacion' => 'Calificación',
         ];

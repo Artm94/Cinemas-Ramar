@@ -25,6 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'nombre',
             'descripcion',
             'resena',
+            'duracion',
             'clasificacion',
             'calificacion',
         ],

@@ -25,6 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'sala_id',
             'pelicula_id',
             'fecha_funcion',
+            'fin_funcion',
             'precio',
         ],
     ]) ?>

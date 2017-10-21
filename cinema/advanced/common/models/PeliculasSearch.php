@@ -18,8 +18,8 @@ class PeliculasSearch extends Peliculas
     public function rules()
     {
         return [
-            [['id', 'calificacion'], 'integer'],
-            [['nombre', 'descripcion', 'resena', 'clasificacion'], 'safe'],
+            [['id', 'calificacion', 'duracion'], 'integer'],
+            [['nombre', 'descripcion', 'resena', 'clasificacion', 'duracion'], 'safe'],
         ];
     }
 
@@ -66,6 +66,7 @@ class PeliculasSearch extends Peliculas
         $query->andFilterWhere(['like', 'nombre', $this->nombre])
             ->andFilterWhere(['like', 'descripcion', $this->descripcion])
             ->andFilterWhere(['like', 'resena', $this->resena])
+            ->andFilterWhere(['like', 'duracion', $this->duracion])
             ->andFilterWhere(['like', 'clasificacion', $this->clasificacion]);
 
         return $dataProvider;

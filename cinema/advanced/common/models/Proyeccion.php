@@ -35,7 +35,7 @@ class Proyeccion extends \yii\db\ActiveRecord
         return [
             [['sala_id', 'pelicula_id', 'fecha_funcion', 'precio'], 'required'],
             [['pelicula_id'], 'integer'],
-            [['fecha_funcion'], 'safe'],
+            [['fecha_funcion', 'fin_funcion'], 'safe'],
             [['precio'], 'number'],
             [['sala_id'], 'string', 'max' => 10],
             [['sala_id'], 'exist', 'skipOnError' => true, 'targetClass' => Salas::className(), 'targetAttribute' => ['sala_id' => 'id']],
@@ -53,6 +53,7 @@ class Proyeccion extends \yii\db\ActiveRecord
             'sala_id' => 'Sala',
             'pelicula_id' => 'Nombre de la película',
             'fecha_funcion' => 'Fecha de la función',
+            'fin_funcion' => 'Termino de la funcion',
             'precio' => 'Precio (MXN)',
         ];
     }

@@ -72,8 +72,8 @@ class ParticipantesController extends Controller
             $model->imagen = UploadedFile::getInstance($model, 'imagen');
 
             if(!empty($model->imagen)){
-                    $model->imagen->saveAs('img/artist/' . $model->nombres . $model->apellidos . $model->tipo . '.' . $model->imagen->extension);
-                    $model->fotografia = Url::to('@web') .'/img/artist/' . $model->nombres . $model->apellidos . $model->tipo . '.' . $model->imagen->extension;
+                    $model->imagen->saveAs('img/artist/' . $model->nombres . $model->tipo . '.' . $model->imagen->extension);
+                    $model->fotografia = Url::to('@web') . '/img/artist/' . $model->nombres . $model->tipo . '.' . $model->imagen->extension;
             }
 
             if($model->save(false)){
@@ -103,8 +103,8 @@ class ParticipantesController extends Controller
             $model->imagen = UploadedFile::getInstance($model, 'imagen');
 
             if(!empty($model->imagen)){
-                    $model->imagen->saveAs('img/artist/' . $model->nombres . $model->apellidos . $model->tipo . '.' . $model->imagen->extension);
-                    $model->fotografia = Url::to('@web') .'/img/artist/' . $model->nombres . $model->apellidos . $model->tipo . '.' . $model->imagen->extension;
+                    $model->imagen->saveAs('img/artist/'  . $model->nombres . $model->tipo . '.' . $model->imagen->extension);
+                    $model->fotografia = Url::to('@web') . '/img/artist/' . $model->nombres . $model->tipo . '.' . $model->imagen->extension;
             }
 
             if($model->save(false)){

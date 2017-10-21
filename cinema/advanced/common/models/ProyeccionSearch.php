@@ -19,7 +19,7 @@ class ProyeccionSearch extends Proyeccion
     {
         return [
             [['id', 'pelicula_id'], 'integer'],
-            [['sala_id', 'fecha_funcion'], 'safe'],
+            [['sala_id', 'fecha_funcion', 'fin_funcion'], 'safe'],
             [['precio'], 'number'],
         ];
     }
@@ -63,6 +63,7 @@ class ProyeccionSearch extends Proyeccion
             'id' => $this->id,
             'pelicula_id' => $this->pelicula_id,
             'fecha_funcion' => $this->fecha_funcion,
+            'fin_funcion' => $this->fin_funcion,
             'precio' => $this->precio,
         ]);
 

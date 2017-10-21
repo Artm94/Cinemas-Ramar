@@ -5,6 +5,7 @@ namespace backend\controllers;
 use Yii;
 use common\models\Proyeccion;
 use common\models\ProyeccionSearch;
+use common\models\Peliculas;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -66,16 +67,23 @@ class ProyeccionController extends Controller
         $model = new Proyeccion();
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            $comprobar = Proyeccion::find()->where(['pelicula_id' => $model->pelicula_id])->andWhere(['fecha_funcion' => $model->fecha_funcion])->andWhere(['sala_id' => $model->sala_id])->all();
+            $movie = Peliculas::findOne($model->pelicula_id);
+            $startTime = $model->fecha_funcion;
+            $duracion = $movie->duracion + 15; // 15 minutos de espera entre cada pelicula
+            $endTime = date('Y-m-d H:i:s', strtotime("+$duracion minutes", strtotime($startTime)));
+            /*echo Proyeccion::find()->where(['and', ['sala_id' => $model->sala_id], ['between', 'fecha_funcion', $startTime, $endTime]])->orWhere(['and', ['sala_id' => $model->sala_id], ['between', 'fin_funcion', $startTime, $endTime]])->orWhere(['and', ['sala_id' => $model->sala_id], ['and', ['and', "'fecha_funcion' <= '$startTime'", "'fecha_funcion' <= '$endTime'"], ['and', "'fin_funcion' >= '$startTime'", "'fin_funcion' >= '$endTime'"]]])->createCommand()->getRawSql();
+            die();*/
+            $comprobar = Proyeccion::find()->where(['and', ['sala_id' => $model->sala_id], ['between', 'fecha_funcion', $startTime, $endTime]])->orWhere(['and', ['sala_id' => $model->sala_id], ['between', 'fin_funcion', $startTime, $endTime]])->orWhere(['and', ['sala_id' => $model->sala_id], ['and', ['and', "'fecha_funcion' <= '$startTime'", "'fecha_funcion' <= '$endTime'"], ['and', "'fin_funcion' >= '$startTime'", "'fin_funcion' >= '$endTime'"]]])->all();
             if(empty($comprobar)){
+                $model->fin_funcion = $endTime;
                 $model->save();
                 return $this->redirect(['view', 'id' => $model->id]);
             }
             $model->addError('fecha_funcion', 'Ya existe una función programada para esta fecha y sala');
         }
         return $this->render('create', [
-                'model' => $model,
-            ]);
+            'model' => $model,
+        ]);
     }
 
     /**
@@ -88,14 +96,20 @@ class ProyeccionController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            $movie = Peliculas::findOne($model->pelicula_id);
+            $startTime = strtotime($model->fecha_funcion);
+                $duracion = $movie->duracion + 15; //15 minutos de espera entre funcion y funcion
+                $endTime = strtotime("+$duracion minutes", $startTime);
+                $model->fin_funcion = date('Y-m-d H:i:s', $endTime);
+                $model->save();
+                return $this->redirect(['view', 'id' => $model->id]);
+            } else {
+                return $this->render('update', [
+                    'model' => $model,
+                ]);
+            }
         }
-    }
 
     /**
      * Deletes an existing Proyeccion model.

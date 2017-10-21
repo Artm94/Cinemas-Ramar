@@ -75,79 +75,116 @@ class PeliculasController extends Controller
         $modelsContenidos = [new Contenido];
         $modelsRepartos = [new Reparto];
         $modelApiOptions = new ApiOptions();
-        $modelApiOptions->load(Yii::$app->request->post());
-        if ($model->load(Yii::$app->request->post())) {
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            $flag = true;
+            $modelApiOptions->load(Yii::$app->request->post());
+            $finder = new MovieFinder('e01a182bdeed3afc056d41564eba1bdd', 'es');
+            $movie = (empty($modelApiOptions->movieId)) ? null : $finder->getMovieById($modelApiOptions->movieId);
             //echo "Carga modelo POST";
             $transaction = \Yii::$app->db->beginTransaction();
             try{
                 //print_r(Yii::$app->request->post());
                 //print_r($modelApiOptions);
-                if($modelApiOptions->movieFlag){
-                    //echo "Carga movie flag";
-                    $finder = new MovieFinder('e01a182bdeed3afc056d41564eba1bdd', 'es');
-                    $movie = $finder->getMovieById($modelApiOptions->movieId);
-                    if($modelApiOptions->movieInformation){
-                        //echo "carga movieInformation";
-                        $model->descripcion = $movie->tagline;
-                        $model->resena = $movie->overview;
-                        $model->save(false);
-                        //echo "guarda modelo";
-                    }
-                    if($modelApiOptions->movieMediaContent){
-                        //echo "carga media";
-                        $data = array();
-                        $data[] = [$model->id,$model->nombre . ' poster',$finder->getImage($movie->poster_path),'portada'];
-                        $data[] = [$model->id,$model->nombre . ' backdrop',$finder->getImage($movie->backdrop_path, 'w1920'),'fondo'];
-                        $videos = $finder->getVideosById($modelApiOptions->movieId, 'en');
-                        if(count($videos) > 0){
-                                foreach ($videos as $video) {
-                                    if($video->site = 'YouTube' && $video->type == 'Trailer'){
-                                        $data[] = [$model->id,$video->name,'https://www.youtube.com/embed/'.$video->key,'trailer'];
-                                    }
-                                }
-                            }
-                        foreach ($movie->images->backdrops as $image) {
-                                $data[] = [$model->id,$model->nombre . ' image',$finder->getImage($image->file_path, 'w1920'),'imagen'];
-                            }
-                        Yii::$app->db->createCommand()->batchInsert('contenido', ['pelicula_id', 'nombre', 'url', 'tipo'],$data)->execute();
-                        //echo "guarda media";        
-                    }
 
-                    if($modelApiOptions->movieCredits){
-                        //echo "carga credits";
-                        $participantes = array();
-                        $peliculaParticipantes = array();
-                        $credits = $movie->credits->cast;
-                        foreach ($credits as $actor) {
-                            $participante = Participantes::find()->where(['nombres' => $actor->name])->orWhere(['id' => $actor->id])->one();
-                            if(empty($participante)){
-                                if(!empty($actor->profile_path)){
-                                    $participantes[] = [$actor->id, $actor->name, "actor", $finder->getImage($actor->profile_path)];
-                                    $peliculaParticipantes[] = [$model->id, $actor->id];
-                                }
-                                //echo "agregar actor";
-                            }else{
-                                $peliculaParticipantes[] = [$model->id, $participante->id];
-                                //echo "enlaza actor";
+                if($modelApiOptions->movieInformation && !empty($movie)){
+                        //echo "carga movieInformation";
+                    $model->descripcion = $movie->tagline;
+                    $model->resena = $movie->overview;
+                    $model->save(false);
+                        //echo "guarda modelo";
+                }else{
+                    $model->save(false);
+                }
+                if($modelApiOptions->movieMediaContent && !empty($movie)){
+                        //echo "carga media";
+                    $data = array();
+                    $data[] = [$model->id,$model->nombre . ' poster',$finder->getImage($movie->poster_path),'portada'];
+                    $data[] = [$model->id,$model->nombre . ' backdrop',$finder->getImage($movie->backdrop_path, 'w1920'),'fondo'];
+                    $videos = $finder->getVideosById($modelApiOptions->movieId, 'en');
+                    if(count($videos) > 0){
+                        foreach ($videos as $video) {
+                            if($video->site = 'YouTube' && $video->type == 'Trailer'){
+                                $data[] = [$model->id,$video->name,'https://www.youtube.com/embed/'.$video->key,'trailer'];
                             }
                         }
-
-                        Yii::$app->db->createCommand()->batchInsert('participantes', ['id', 'nombres', 'tipo', 'fotografia'],$participantes)->execute();
-                        Yii::$app->db->createCommand()->batchInsert('reparto', ['pelicula_id', 'participante_id'],$peliculaParticipantes)->execute();
-                        //echo "guarda actores y enlaces";
+                    }
+                    foreach ($movie->images->backdrops as $image) {
+                        $data[] = [$model->id,$model->nombre . ' image',$finder->getImage($image->file_path, 'w1920'),'imagen'];
+                    }
+                    Yii::$app->db->createCommand()->batchInsert('contenido', ['pelicula_id', 'nombre', 'url', 'tipo'],$data)->execute();
+                        //echo "guarda media";        
+                }else{
+                    $modelsContenido = Model::createMultiple(Contenido::classname());
+                    Model::loadMultiple($modelsContenido, Yii::$app->request->post());
+                            //Valida contenido offline
+                    $validContenido = Model::validateMultiple($modelsContenido);
+                    if($validContenido){
+                        foreach ($modelsContenido as $index => $modelContenido) {
+                            $modelContenido->file = UploadedFile::getInstance($modelContenido, "[{$index}]file");
+                            if(!empty($modelContenido->file)){
+                                $modelContenido->file->saveAs('img/movies/' . $modelContenido->nombre . $modelContenido->tipo . '.' . $modelContenido->file->extension);
+                                $modelContenido->url = Url::to('@web') . '/img/movies/' . $modelContenido->nombre . $modelContenido->tipo . '.' . $modelContenido->file->extension;
+                            }
+                            $modelContenido->pelicula_id = $model->id;
+                            if (! ($flag = $modelContenido->save(false))) {
+                                $transaction->rollBack();
+                                break;
+                            }
+                        }
+                    }
+                }
+                if($modelApiOptions->movieCredits && !empty($movie)){
+                        //echo "carga credits";
+                    $participantes = array();
+                    $peliculaParticipantes = array();
+                    $credits = $movie->credits->cast;
+                    foreach ($credits as $actor) {
+                        $participante = Participantes::find()->where(['nombres' => $actor->name])->orWhere(['id' => $actor->id])->one();
+                        if(empty($participante)){
+                            if(!empty($actor->profile_path)){
+                                $participantes[] = [$actor->id, $actor->name, "actor", $finder->getImage($actor->profile_path)];
+                                $peliculaParticipantes[] = [$model->id, $actor->id];
+                            }
+                                //echo "agregar actor";
+                        }else{
+                            $peliculaParticipantes[] = [$model->id, $participante->id];
+                                //echo "enlaza actor";
+                        }
                     }
 
+                    Yii::$app->db->createCommand()->batchInsert('participantes', ['id', 'nombres', 'tipo', 'fotografia'],$participantes)->execute();
+                    Yii::$app->db->createCommand()->batchInsert('reparto', ['pelicula_id', 'participante_id'],$peliculaParticipantes)->execute();
+                        //echo "guarda actores y enlaces";
+                }else{
+                    $modelsReparto = Model::createMultiple(Reparto::classname());
+                    Model::loadMultiple($modelsReparto, Yii::$app->request->post());
+                    $validReparto = Model::validateMultiple($modelsReparto);
+                    if($validReparto){
+                        foreach ($modelsReparto as $modelReparto) {
+                            $modelReparto->pelicula_id = $model->id;
+                            if (!($flag = $modelReparto->save(false))) {
+                                $transaction->rollBack();
+                                break;
+                            }
+                        }
+                    }
                 }
 
             }catch (Exception $e) {
-                    $transaction->rollBack();
-                    echo $e;
-                }
-
+                $transaction->rollBack();
+                echo $e;
+            }
+            if($flag){
                 $transaction->commit();
-                //echo "commit a la bd";
-                //die();
                 return $this->redirect(['view', 'id' => $model->id]);
+            }else{
+                return $this->render('create', [
+                    'model' => $model,
+                    'modelsContenido' => (empty($modelsContenido)) ? [new Contenido] : $modelsContenido,
+                    'modelsReparto' => (empty($modelsReparto)) ? [new Reparto] : $modelsReparto,
+                    'apiData' => $modelApiOptions,
+                ]);
+            }
 
         } else {
             return $this->render('create', [
@@ -170,96 +207,132 @@ class PeliculasController extends Controller
         $model = $this->findModel($id);
         $modelsContenido = Contenido::find()->where(['pelicula_id' => $id])->all();
         $modelsReparto = Reparto::find()->where(['pelicula_id' => $id])->all();
-
-        $apiData = new DynamicModel(['apiFlag']);
-        $apiData->addRule(['apiFlag'], 'integer');
-
-        if ($model->load(Yii::$app->request->post())) {
-            $oldContenidoIDs = ArrayHelper::map($modelsContenido, 'id', 'id');
-            $modelsContenido = Model::createMultiple(Contenido::classname(), $modelsContenido);
-            Model::loadMultiple($modelsContenido, Yii::$app->request->post());
-            $deletedContenidoIDs = array_diff($oldContenidoIDs, array_filter(ArrayHelper::map($modelsContenido, 'id', 'id')));
-
-            $oldRepartoIDs = ArrayHelper::map($modelsReparto, 'id', 'id');
-            $modelsReparto = Model::createMultiple(Reparto::classname(), $modelsReparto);
-            Model::loadMultiple($modelsReparto, Yii::$app->request->post());
-            $deletedRepartoIDs = array_diff($oldRepartoIDs, array_filter(ArrayHelper::map($modelsReparto, 'id', 'id')));
-
-            // validate all models
-            $valid = $model->validate();
-            $valid = Model::validateMultiple($modelsContenido) && $valid;
-            $valid = Model::validateMultiple($modelsReparto) && $valid;
-
-            if ($valid) {
-                $transaction = \Yii::$app->db->beginTransaction();
-                try {
-                    if ($flag = $model->save(false)) {
-
-                        if($apiData->load(Yii::$app->request->post()) && $apiData->validate()){
-                            //Contenido Online
-                            $finder = new MovieFinder('e01a182bdeed3afc056d41564eba1bdd', 'es');
-                            $movie = $finder->getMovieById($apiData->apiFlag);
-                            $data[] = [$model->id,$model->nombre . ' poster',$finder->getImage($movie->poster_path),'portada'];
-                            $data[] = [$model->id,$model->nombre . ' backdrop',$finder->getImage($movie->backdrop_path, 'w1920'),'fondo'];
-                            $videos = $finder->getVideosById($apiData->apiFlag, 'en');
-                            if(count($videos) > 0){
-                                foreach ($videos as $video) {
-                                    if($video->site = 'YouTube' && $video->type == 'Trailer'){
-                                        $data[] = [$model->id,$video->name,'https://www.youtube.com/embed/'.$video->key,'trailer'];
-                                    }
-                                }
-                            }
-                            foreach ($movie->images->backdrops as $image) {
-                                $data[] = [$model->id,$model->nombre . ' image',$finder->getImage($image->file_path, 'w1920'),'imagen'];
-                            }
-                            Contenido::deleteAll(['pelicula_id' => $model->id]);
-                            Yii::$app->db->createCommand()->batchInsert('contenido', ['pelicula_id', 'nombre', 'url', 'tipo'],$data)->execute();
-
-                        }else{
-                            //Elimina de la BD los contenidos eliminados
-                            if (! empty($deletedContenidoIDs)) {
-                                Contenido::deleteAll(['id' => $deletedContenidoIDs]);
-                            }
-                            foreach ($modelsContenido as $index => $modelContenido) {
-                                $modelContenido->file = UploadedFile::getInstance($modelContenido, "[{$index}]file");
-                                if(!empty($modelContenido->file)){
-                                    $modelContenido->file->saveAs('img/movies/' . $modelContenido->nombre . $modelContenido->tipo . '.' . $modelContenido->file->extension);
-                                    $modelContenido->url = Url::to('@web') . 'img/movies/' . $modelContenido->nombre . $modelContenido->tipo . '.' . $modelContenido->file->extension;
-                                }
-                                $modelContenido->pelicula_id = $model->id;
-                                if (! ($flag = $modelContenido->save(false))) {
-                                    $transaction->rollBack();
-                                    break;
-                                }
-                            }
-                            //Elimina de la BD los participantes eliminados
-                            if (! empty($deletedRepartoIDs)) {
-                                Reparto::deleteAll(['id' => $deletedRepartoIDs]);
-                            }
-                            foreach ($modelsReparto as $modelReparto) {
-                                $modelReparto->pelicula_id = $model->id;
-                                if (! ($flag = $modelReparto->save(false))) {
-                                    $transaction->rollBack();
-                                    break;
-                                }
+        $modelApiOptions = new ApiOptions();
+        $finder;
+        $movie;
+        $flag = true;
+        if ($model->load(Yii::$app->request->post()) && ($flag = $flag && $model->validate())) {
+            $modelApiOptions->load(Yii::$app->request->post());
+            $transaction = \Yii::$app->db->beginTransaction();
+            try{
+                if(!empty($modelApiOptions->movieId)){
+                    $finder = new MovieFinder('e01a182bdeed3afc056d41564eba1bdd', 'es');
+                    $movie = $finder->getMovieById($modelApiOptions->movieId);
+                }
+                if($modelApiOptions->movieInformation && !empty($movie)){
+                    $model->resena = $movie->overview;
+                    $model->descripcion = $movie->tagline;
+                    $model->duracion = $movie->runtime;
+                }
+                $flag = $flag && ($model->save());
+                if($modelApiOptions->movieMediaContent && !empty($movie)){
+                        //echo "carga media";
+                    $data = array();
+                    $data[] = [$model->id,$model->nombre . ' poster',$finder->getImage($movie->poster_path),'portada'];
+                    $data[] = [$model->id,$model->nombre . ' backdrop',$finder->getImage($movie->backdrop_path, 'w1920'),'fondo'];
+                    $videos = $finder->getVideosById($modelApiOptions->movieId, 'en');
+                    if(count($videos) > 0){
+                        foreach ($videos as $video) {
+                            if($video->site = 'YouTube' && $video->type == 'Trailer'){
+                                $data[] = [$model->id,$video->name,'https://www.youtube.com/embed/'.$video->key,'trailer'];
                             }
                         }
                     }
-                    if ($flag) {
-                        $transaction->commit();
-                        return $this->redirect(['view', 'id' => $model->id]);
+                    foreach ($movie->images->backdrops as $image) {
+                        $data[] = [$model->id,$model->nombre . ' image',$finder->getImage($image->file_path, 'w1920'),'imagen'];
                     }
-                } catch (Exception $e) {
-                    $transaction->rollBack();
+                    Contenido::deleteAll(['pelicula_id' => $model->id]);    
+                    Yii::$app->db->createCommand()->batchInsert('contenido', ['pelicula_id', 'nombre', 'url', 'tipo'],$data)->execute();
+                        //echo "guarda media";        
+                }else{
+                    $oldContenidoIDs = ArrayHelper::map($modelsContenido, 'id', 'id');
+                    $modelsContenido = Model::createMultiple(Contenido::classname(), $modelsContenido);
+                    Model::loadMultiple($modelsContenido, Yii::$app->request->post());
+                    $deletedContenidoIDs = array_diff($oldContenidoIDs, array_filter(ArrayHelper::map($modelsContenido, 'id', 'id')));
+                    $flag = $flag && Model::validateMultiple($modelsContenido);
+                    if($flag){
+                        //Elimina de la BD los contenidos eliminados
+                        if (! empty($deletedContenidoIDs)) {
+                            Contenido::deleteAll(['id' => $deletedContenidoIDs]);
+                        }
+                        foreach ($modelsContenido as $index => $modelContenido) {
+                            $modelContenido->file = UploadedFile::getInstance($modelContenido, "[{$index}]file");
+                            if(!empty($modelContenido->file)){
+                                $modelContenido->file->saveAs('img/movies/' . $modelContenido->nombre . $modelContenido->tipo . '.' . $modelContenido->file->extension);
+                                $modelContenido->url = Url::to('@web') . '/img/movies/' . $modelContenido->nombre . $modelContenido->tipo . '.' . $modelContenido->file->extension;
+                            }
+                            $modelContenido->pelicula_id = $model->id;
+                            if (! ($flag = $modelContenido->save(false))) {
+                                $transaction->rollBack();
+                                break;
+                            }
+                        }
+                    }
                 }
+
+                if($modelApiOptions->movieCredits && !empty($movie)){
+                    //echo "carga credits";
+                    $participantes = array();
+                    $peliculaParticipantes = array();
+                    $credits = $movie->credits->cast;
+                    foreach ($credits as $actor) {
+                        $participante = Participantes::find()->where(['nombres' => $actor->name])->orWhere(['id' => $actor->id])->one();
+                        if(empty($participante)){
+                            if(!empty($actor->profile_path)){
+                                $participantes[] = [$actor->id, $actor->name, "actor", $finder->getImage($actor->profile_path)];
+                                $peliculaParticipantes[] = [$model->id, $actor->id];
+                            }
+                                //echo "agregar actor";
+                        }else{
+                            $peliculaParticipantes[] = [$model->id, $participante->id];
+                                //echo "enlaza actor";
+                        }
+                    }
+                    Reparto::deleteAll(['pelicula_id' => $model->id]);
+                    Yii::$app->db->createCommand()->batchInsert('participantes', ['id', 'nombres', 'tipo', 'fotografia'],$participantes)->execute();
+                    Yii::$app->db->createCommand()->batchInsert('reparto', ['pelicula_id', 'participante_id'],$peliculaParticipantes)->execute();
+                }else{
+                    $oldRepartoIDs = ArrayHelper::map($modelsReparto, 'id', 'id');
+                    $modelsReparto = Model::createMultiple(Reparto::classname(), $modelsReparto);
+                    Model::loadMultiple($modelsReparto, Yii::$app->request->post());
+                    $deletedRepartoIDs = array_diff($oldRepartoIDs, array_filter(ArrayHelper::map($modelsReparto, 'id', 'id')));
+                    if(Model::validateMultiple($modelsReparto)){
+                        //Elimina de la BD los participantes eliminados
+                        if (! empty($deletedRepartoIDs)) {
+                            Reparto::deleteAll(['id' => $deletedRepartoIDs]);
+                        }
+                        foreach ($modelsReparto as $modelReparto) {
+                            $modelReparto->pelicula_id = $model->id;
+                            if (! ($flag = $modelReparto->save(false))) {
+                                $transaction->rollBack();
+                                break;
+                            }
+                        }
+                    }
+                }
+
+            }catch(Exception $e){
+                $transaction->rollBack();
+                echo $e;
+            }
+            if($flag){
+                $transaction->commit();
+                return $this->redirect(['view', 'id' => $model->id]);
+            }else{
+                return $this->render('create', [
+                    'model' => $model,
+                    'modelsContenido' => (empty($modelsContenido)) ? [new Contenido] : $modelsContenido,
+                    'modelsReparto' => (empty($modelsReparto)) ? [new Reparto] : $modelsReparto,
+                    'apiData' => $modelApiOptions,
+                ]);
             }
         } else {
             return $this->render('update', [
-            'model' => $model,
-            'modelsContenido' => (empty($modelsContenido)) ? [new Contenido] : $modelsContenido,
-            'modelsReparto' => (empty($modelsReparto)) ? [new Reparto] : $modelsReparto,
-            'apiData' => $apiData,
-        ]);
+                'model' => $model,
+                'modelsContenido' => (empty($modelsContenido)) ? [new Contenido] : $modelsContenido,
+                'modelsReparto' => (empty($modelsReparto)) ? [new Reparto] : $modelsReparto,
+                'apiData' => $modelApiOptions,
+            ]);
         }
     }
 

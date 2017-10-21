@@ -4,10 +4,10 @@ $this->title = $model->nombre;
 use yii\helpers\Url; 
  ?>
  <div class="container-fluid">
- 	<div class="movie-banner" style="background-image: url('<?= (empty($model->contenido['fondo'])) ? '' : $model->contenido['fondo']->url ?>'); background-size: cover; background-position: center;">
+ 	<div class="movie-banner" style="background-image: url('<?= (empty($model->contenido['fondo'])) ? Url::to('@web/img/') . 'not_avaible_landscape.png' : $model->contenido['fondo']->url ?>'); background-size: cover; background-position: center;">
  		<div class="row">
  			<div class="col-md-4 col-xs-12">
- 				<img src=" <?= (empty($model->contenido['portada'])) ? '' : $model->contenido['portada']->url ?> " alt="<?= (empty($model->contenido['portada'])) ? '' : $model->contenido['portada']->nombre ?>" style="width:240px; height: 320px; margin: 0px; margin: 20px 20px;">
+ 				<img src=" <?= (empty($model->contenido['portada'])) ? Url::to('@web/img/') . 'not_avaible_portrait.png' : $model->contenido['portada']->url ?> " alt="<?= (empty($model->contenido['portada'])) ? 'not avaible' : $model->contenido['portada']->nombre ?>" style="width:240px; height: 320px; margin: 0px; margin: 20px 20px;">
  			</div>
  			<div class="col-md-8 col-xs-12">
  				<h1 style="color: white; text-align: right; margin-right: 20px; text-shadow: 0px 2px 2px rgba(150, 150, 150, 1);"><?= $model->nombre ?></h1>
@@ -29,16 +29,20 @@ use yii\helpers\Url;
      <div class="box box-solid">
        <div class="box-body">
          <div class="row">
-           <?php foreach ($model->participantes as $participante): ?>
+           <?php if(!empty($model->participantes)): ?>
+            <?php foreach ($model->participantes as $participante): ?>
             <div class="col-md-2 col-xs-4">
               <div class="thumbnail">
-                <img style="height: 220px; width:180px" src="<?= $participante->fotografia ?>">
+                <img style="height: 220px; width:180px" src="<?= (empty($participante->fotografia)) ? Url::to('@web/img/') . 'not_avaible_landscape.png' : $participante->fotografia ?>">
               </div>
               <div class="caption">
                 <p class="text-center"><b><?= $participante->nombres ?></b></p>
               </div>
               </div>
             <?php endforeach; ?>
+          <?php else: ?>
+            <h2 class="text-center">Participantes no disponibles</h2>
+          <?php endif; ?>
          </div>
        </div>
      </div> 
@@ -48,15 +52,11 @@ use yii\helpers\Url;
       <?php if(!empty($model->contenido['imagenes']) && count($model->contenido['imagenes']) > 0): ?>
 		  	<?php foreach ($model->contenido['imagenes'] as $imagen):?>
 		  		<div class="col-md-3 col-xs-12">
-		  			<img class="img-responsive img-thumbnail" src="<?= $imagen->url ?>" alt="<?= $imagen->nombre ?>" height="480" width="320">
+		  			<img class="img-responsive img-thumbnail" src="<?= (empty($imagen->url)) ? Url::to('@web/img/') . 'not_avaible_landscape.png' : $imagen->url ?>" alt="<?= $imagen->nombre ?>" height="480" width="320">
 		  		</div>
 		  	<?php endforeach; ?>
         <?php else: ?>
-                <div class="box box-solid">
-                  <div class="box-body">
-                    <h2 class="text-center">Imagenes no disponibles</h2>
-                  </div>
-                </div>
+                <h2 class="text-center">Imagenes no disponibles</h2>
               <?php endif; ?>
 		</div>
   	</div>
@@ -67,11 +67,7 @@ use yii\helpers\Url;
 		  			<?php if(!empty($model->contenido['trailer']) && count($model->contenido['trailer']) > 0): ?>
               <iframe class="center-block video" src="<?= $model->contenido['trailer']->url ?>" frameborder="0" allowfullscreen></iframe>
               <?php else: ?>
-                <div class="box box-solid">
-                  <div class="box-body">
-                    <h2 class="text-center">Video no disponible</h2>
-                  </div>
-                </div>
+                <h2 class="text-center">Trailer no disponible</h2>
               <?php endif; ?>
 		  		</div>
   			</div>

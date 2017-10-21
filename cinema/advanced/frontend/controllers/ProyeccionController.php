@@ -38,22 +38,26 @@ class ProyeccionController extends \yii\web\Controller
                 $customer = \Conekta\Customer::find($userprofile->conekta_id);
             }            
             $compras = array();
+            $line_items = array();
             $amount = 0;
             foreach ($model->items as $item) {
             $values = explode(',', $item);
-            $compras[] = ['bl' . uniqid(), Yii::$app->user->identity->id, $proyeccion->id, $values[1], $values[0], date('Y-m-d H:s:i'), $proyeccion->precio];
-            $amount+= intval($proyeccion->precio)*100;
+            $boletoId = 'bl' . uniqid();
+            $compras[] = [$boletoId, Yii::$app->user->identity->id, $proyeccion->id, $values[1], $values[0], date('Y-m-d H:s:i'), $proyeccion->precio];
+            $line_items[] = ['name' => $boletoId, 'unit_price' => ($proyeccion->precio * 100), 'quantity' => 1, 'antifraud_info' => ['starts_at' => strtotime($proyeccion->fecha_funcion), 'ends_at' => strtotime($proyeccion->fin_funcion), 'ticket_class' => 'VIP', 'seat_number' => ($values[1] . $values[0])]];
+            $amount += intval($proyeccion->precio)*100;
             }
-            $lugar = Yii::$app->request->post('items');            
-            $items = $this->arrayLineItem($compras,$lugar);
-            $order = $this->createOrder($items,$customer,$amount,$token);           
-            //die();                   
-            Yii::$app->db->createCommand()->batchInsert('boletos', ['id', 'usuario_id', 'proyeccion_id', 'numero_asiento', 'fila_asiento', 'fecha_compra', 'precio'],$compras)->execute();
+            $order = $this->createOrder($line_items,$customer,$amount,$token);
+            if(isset($order['errorType'])){
+                $model->addError('card_number', $order['errorMessage']);
+            }else{
+                Yii::$app->db->createCommand()->batchInsert('boletos', ['id', 'usuario_id', 'proyeccion_id', 'numero_asiento', 'fila_asiento', 'fecha_compra', 'precio'],$compras)->execute();
 
             return $this->render('recibo', [
             'proyeccion' => $proyeccion,
             'compras' => $compras,
             ]);
+            }             
         }
         return $this->render('comprar', [
         	'model' => $model,
@@ -109,12 +113,6 @@ class ProyeccionController extends \yii\web\Controller
                 "name" =>  $userprofile->nombres . ' ' . $userprofile->apellidos,
                 "email" => $user->email,
                 "phone" => strval($userprofile->telefono),
-                /*"payment_sources" => array(
-                    array(
-                        "type" => "card",
-                        "token_id" => $token
-                    )
-                  )*/
                 )
             );
           return $customer;
@@ -126,24 +124,6 @@ class ProyeccionController extends \yii\web\Controller
           echo $error->getMessage();
         }
     }
-
-    public function arrayLineItem($compras,$lugar){
-        $items = array();
-        $indice=0;
-        foreach ($compras as $compra) {
-            $fecha = date_create();
-            $fecha_fin = date_create("10/12/2018");
-            $lugar_row = explode(",",$lugar[$indice]);
-            $sitio = $lugar_row[1].$lugar_row[0];
-            //print_r($lugar_row);
-            //$info = array();
-            //$info[] = [];
-            $items[] = ['name' => $compra[0], 'unit_price' => ($compra[6]*100), 'quantity'=>1,'antifraud_info'=>array('starts_at'=>date_timestamp_get($fecha), 'ends_at'=>date_timestamp_get($fecha_fin), 'ticket_class'=>"VIP",'seat_number'=>$sitio)];
-            $indice++;
-        }
-        return $items;
-    }
-
 
     public function createOrder($items,$customer,$total,$token){
         try{
@@ -169,11 +149,11 @@ class ProyeccionController extends \yii\web\Controller
             );
             return $order;
         } catch (\Conekta\ProccessingError $error){
-            echo $error->getMesage();
+            return ['errorType' => 'ProccessingError', 'errorMessage' => $error->getMessage()];
         } catch (\Conekta\ParameterValidationError $error){
-          echo $error->getMessage();
+          return ['errorType' => 'ParameterValidationError', 'errorMessage' => $error->getMessage()];
         } catch (\Conekta\Handler $error){
-          echo $error->getMessage();
+          return ['errorType' => 'Handler', 'errorMessage' => $error->getMessage()];
         }
     }
 

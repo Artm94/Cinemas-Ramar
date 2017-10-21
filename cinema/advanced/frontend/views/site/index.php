@@ -61,7 +61,7 @@ $this->title = 'Pagina de inicio';
                 <?php foreach ($peliculas as $pelicula): ?>
                   <div class="col-md-3 col-xs-12">
                     <div class="thumbnail movie-item">
-                        <img src="<?= $pelicula->contenido['portada']->url ?>" alt="Lights" style="width: 320px;">
+                        <img src="<?= (empty($pelicula->contenido['portada']->url)) ? Url::to('@web/img/') . 'not_avaible_portrait.png' : $pelicula->contenido['portada']->url ?>" alt="Lights" style="width: 320px;">
                         <div class="caption" style="max-height: 400px;">
                           <p class="text-truncate"><?= $pelicula->descripcion ?></p>
                           <a href=<?= "\"" . Url::to("index.php?r=peliculas/view&id=$pelicula->id") . "\""?>> <span class="glyphicon glyphicon-film"></span> Mas informacion</a>
