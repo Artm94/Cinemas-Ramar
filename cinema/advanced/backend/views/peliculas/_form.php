@@ -304,6 +304,9 @@ $('body').on('click', '#search-movie', function(){
                     columnCount = 0;
                 }
             });
+            if(!columnCount == 0){
+                html += '</div>';
+            }
             $('#search-items').html(html);
         }else{
             $('#movie-group').parent().after('<p id="notice" style="color: red;">No se encontro informacion para esta pelicula</p>');

@@ -7,19 +7,28 @@ use yii\helpers\Url;
 		<h1>Cartelera de esta semana</h1>
 	</div>
 	<div class="panel-body">
-		<div class="row">
-			<?php foreach($peliculas as $pelicula): ?>
-				<div class="col-md-3 col-xs-12">
-					<div class="thumbnail movie-item">
-						<img class="img-responsive" src=" <?= $pelicula->contenido['portada']->url ?> " alt="<?= $pelicula->contenido['portada']->nombre ?>" style="width: 320px;">
-						<div class="caption" style="max-height: 400px;">
-							<p><strong><p><?= $pelicula->nombre ?></p></strong></p>
-							<p class="text-truncate"><?= $pelicula->descripcion ?></p>
-							<a href=<?= "\"" . Url::to("index.php?r=peliculas/view&id=$pelicula->id") . "\""?>> <span class="glyphicon glyphicon-film"></span> Mas informacion</a>
+			<?php $columnCount = 0; ?>
+			<?php foreach ($peliculas as $pelicula): ?>
+				<?php if($columnCount == 0): ?>
+					<div class="row">
+					<?php endif ?>
+					<div class="col-md-3 col-xs-12">
+						<div class="thumbnail movie-item">
+							<img src="<?= (empty($pelicula->contenido['portada']->url)) ? Url::to('@web/img/') . 'not_avaible_portrait.png' : $pelicula->contenido['portada']->url ?>" alt="Lights" style="width: 320px;">
+							<div class="caption" style="max-height: 400px;">
+								<p class="text-truncate"><?= $pelicula->descripcion ?></p>
+								<a href=<?= "\"" . Url::to("index.php?r=peliculas/view&id=$pelicula->id") . "\""?>> <span class="glyphicon glyphicon-film"></span> Mas informacion</a>
+							</div>
 						</div>
 					</div>
-				</div>
+					<?php $columnCount = $columnCount + 1; ?>
+					<?php if($columnCount == 4): ?>
+					</div>
+					<?php $columnCount = 0; ?>
+				<?php endif ?>
 			<?php endforeach ?>
-		</div>
-	</div>
+			<?php if(!$columnCount == 0): ?>
+          </div>
+        <?php endif; ?>
+</div>
 </div>
